@@ -102,8 +102,8 @@
 								width="20"
 								height="20"
 								viewBox="0 0 50 50"
-								style="fill: #000000"
-								class="svg">
+								style="fill: #666666"
+								class="bg__input__svg">
 								<path
 									d="M 21 4 C 11.082241 4 3 12.082241 3 22 C 3 31.917759 11.082241 40 21 40 C 24.62177 40 27.99231 38.91393 30.820312 37.0625 L 43.378906 49.621094 L 47.621094 45.378906 L 35.224609 32.982422 C 37.581469 29.938384 39 26.13473 39 22 C 39 12.082241 30.917759 4 21 4 z M 21 8 C 28.756241 8 35 14.243759 35 22 C 35 29.756241 28.756241 36 21 36 C 13.243759 36 7 29.756241 7 22 C 7 14.243759 13.243759 8 21 8 z"></path>
 							</svg>
@@ -180,19 +180,24 @@
 						<label for="myCheckBox">Украшения для торта</label>
 					</div>
 
-					<div class="modal overflow-y-scroll fade" id="modal" tabindex="-1">
+					<div class="modal overflow-y-scroll fade" id="modal_car" tabindex="-1">
 						<div class="modal-dialog modal-xl">
 							<div class="modal-content">
 								<div class="container-fluid">
 									<div class="row">
 										<div class="col-6">
-											<img src="./img/cake_4_full.jpg" width="530" alt="" />
+											<img
+												src="./img/cake_1_full.jpg"
+												width="530"
+												alt=""
+												class="mt-5"
+												draggable="false" />
 										</div>
 										<div class="col-6">
-											<h4 class="cakes__title">Карамельный</h4>
+											<h4 class="cakes__title mt-5">Карамельный</h4>
 											<h6 class="cakes__article">Артикул: 10221</h6>
 											<p class="cakes__costs">1 370₽</p>
-											<button class="cakes__btn">Заказать</button>
+											<button class="cakes__btn mb-4">Заказать</button>
 											<p class="cakes__title__text">
 												В основе - оригинальный бисквит, пропитанный сиропом
 												с добавлением <br />
@@ -252,6 +257,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-3">
 						<a
 							href="#!"
@@ -260,85 +266,479 @@
 							id="btn"
 							class="btn btn-primary col-1"
 							data-bs-toggle="modal"
-							data-bs-target="#modal">
-							<img src="img/cake_1.png" alt="" />
-
-							<h5 class="mt-3 ls_5">Торт «С новым годом»</h5>
-							<h6 class="pt-4 fw-normal">4 800 ₽</h6>
-						</a>
-					</div>
-					<div class="col-3">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_2.png" alt="" />
-							<h5 class="mt-3 ls_6">Бенто-торт «С Новым годом»</h5>
-							<h6 class="mt-4 fw-normal mb-5">1 000 ₽</h6>
-						</a>
-					</div>
-					<div class="col-3">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_3.png" alt="" />
-							<h5 class="mt-3 ls_5">Бенто-торт «Новогодний»</h5>
-							<h6 class="mt-4 fw-normal mb-5">1 000 ₽</h6>
-						</a>
-					</div>
-					<div class="col-3 bg-color__cake"></div>
-					<div class="col-3">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_4.png" alt="" />
+							data-bs-target="#modal_car">
+							<img src="img/cake_4.png" draggable="false" alt="" />
 							<h5 class="mt-3 ls_5">Карамельный</h5>
 							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
 						</a>
 					</div>
+
+					<div class="modal overflow-y-scroll fade" id="modal_djo" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-6">
+											<img
+												src="./img/cake_2_full.jpg"
+												draggable="false"
+												width="530"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div class="col-6">
+											<h4 class="cakes__title mt-5">Джованни</h4>
+											<h6 class="cakes__article">Артикул: 4595</h6>
+											<p class="cakes__costs">2 420₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												"Very berry" <br />
+												Воздушный ванильный и малиново-черничный муссы в
+												сочетании со свежими ягодами (малина, клубника,
+												черная смородина, черника) на основе из нежного
+												белого бисквита «Джоконд». Торт покрыт гелем,
+												украшен шоколадным декором, желе маракуйя и кешью.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,3 кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 10 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 5,16 г.; жиры – 11,99 г.;
+												углеводы – 24,35 г.; 226,0 ккал/ 945,76 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Сливки мдж 33%, гель нейтральный (вода, сахар,
+												глюкозный сироп, пектин, лимонная кислота,
+												натуральная ваниль), сахарный песок, продукты яичные
+												пастеризованные (белок), продукты яичные
+												пастеризованные (желток), мука пшеничная
+												хлебопекарная в/с, молоко питьевое
+												ультрапастеризованное м.д.ж 3,2%( молоко цельное,
+												молоко обезжиренное), клубника свежемороженая,
+												малина свежемороженая, черная смородина
+												свежемороженая, черника свежемороженая, пюре малина
+												(малина, сахар), пюре черника (черника, сахар),орех
+												кешью жаренный дробленый, белый шоколад (сахар,
+												какао-масло, сухое молоко, подсолнечный лецитин,
+												натуральная ваниль), глазурь шоколадная белая(сахар,
+												масло какао, сухое цельное молоко, сухое
+												обезжиренное молоко, молочный жир, эмульгатор,
+												лецитин соевый, натуральный ароматизатор ваниль),
+												крахмал кукурузный, желатин пищевой, пюре маракуйя с
+												семечкой (маракуйя с семечкой, сахар), глазурь
+												шоколадная темная (темный шоколад, глюкоза, сливки
+												33%), агар, ароматизатор натуральный ваниль,
+												какао-масло, краситель натуральный пищевой:
+												хлорофилл, консервант сорбиновая кислота
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (арахис, соя,
+												орехи, кунжут и продукты их переработки). При
+												производстве используется пюре ягоды малины, которое
+												может окрашивать бисквит в сине-фиолетовый цвет.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="col-3">
 						<a
 							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_5.png" alt="" />
+							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+							type="button"
+							id="btn"
+							class="btn btn-primary col-1"
+							data-bs-toggle="modal"
+							data-bs-target="#modal_djo">
+							<img src="img/cake_5.png" draggable="false" alt="" />
 							<h5 class="mt-3 ls_5">Джованни</h5>
 							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
 						</a>
 					</div>
+
+					<div class="modal overflow-y-scroll fade" id="modal_two" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-6">
+											<img
+												src="./img/cake_3_full.jpg"
+												draggable="false"
+												width="530"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div class="col-6">
+											<h4 class="cakes__title mt-5">
+												Эквадор (три шоколада)
+											</h4>
+											<h6 class="cakes__article">Артикул: 3088</h6>
+											<p class="cakes__costs">2 725₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Шоколадно-сырный мусс из трёх видов шоколада «Barry
+												Callebaut» (белого, молочного и черного) и
+												творожного сыра с прослойкой фойетина на основе из
+												тонкого слоя шоколадного бисквита. Торт украшен
+												ганашем и шоколадным декором.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,1кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 10 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 3,4 г.; жиры – 21,3 г.;
+												углеводы – 28,8 г.; 320,5 ккал/ 1342 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Крем сливочный «Arla», сливки мдж 33%, сахар,
+												молоко, шоколад темный, шоколад молочный, белок
+												яичный пастеризованный, желток яичный
+												пастеризованный, мука пшеничная хлебопекарная в/с,
+												шоколадная глазурь белая, молоко цельное сгущенное с
+												сахаром, белый шоколад, шоколадная глазурь темная,
+												пралине, какао-масло, желатин, какао-порошок
+												алкализованный, вафельная крошка, консервант
+												сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="col-3">
 						<a
 							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_6.png" alt="" />
+							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+							type="button"
+							id="btn"
+							class="btn btn-primary col-1"
+							data-bs-toggle="modal"
+							data-bs-target="#modal_two">
+							<img src="img/cake_6.png" draggable="false" alt="" />
 							<h5 class="mt-3 ls_5">Эквадор (два шоколада)</h5>
 							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
 						</a>
 					</div>
+
+					<div class="modal overflow-y-scroll fade" id="modal_mark" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-6">
+											<img
+												src="./img/cake_4_full.jpg"
+												draggable="false"
+												width="530"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div class="col-6">
+											<h4 class="cakes__title mt-5">Маракайбо</h4>
+											<h6 class="cakes__article">Артикул: 2989</h6>
+											<p class="cakes__costs">3 000₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Три вида лёгкого фруктового мусса, малиновый,
+												клубничный и маракуйя, расположенные слоями, на
+												основе из тонкого белого бисквита. Торт покрыт
+												малиновым гляссажем, украшен шоколадом, физалисом и
+												голубикой.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,2 кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 10 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 4,1 г.; жиры – 31,3 г.;
+												углеводы – 25,0 г.; 398 ккал/ 1666 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Сливки мдж 33%, сахар, пюре малины (малина,
+												тростниковый сахар), пюре клубники (клубника,
+												сахар), пюре маракуйя (маракуйя, сахар), мука
+												пшеничная хлебопекарная в/с, продукты яичные
+												пастеризованные, желатин пищевой, гель нейтральный
+												(вода, сахар, глюкозный сироп, пектин, лимонная
+												кислота, натуральная ваниль), белый шоколад (сахар,
+												какао-масло, сухое молоко, подсолнечный лецитин,
+												натуральная ваниль), глазурь шоколадная темная
+												(темный шоколад, глюкоза, сливки 33%), какао-масло,
+												физалис свежий, голубика свежая, сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-3 bg-color__cake"></div>
+					<div class="col-3">
+						<a
+							href="#!"
+							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+							type="button"
+							id="btn"
+							class="btn btn-primary col-1"
+							data-bs-toggle="modal"
+							data-bs-target="#modal_mark">
+							<img draggable="false" src="img/cake_7.png" alt="" />
+							<h5 class="mt-3 ls_5">Маракайбо</h5>
+							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
+						</a>
+					</div>
+
+					<div class="modal overflow-y-scroll fade" id="modal_cherry" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-6">
+											<img
+												src="./img/cake_5_full.jpg"
+												draggable="false"
+												width="530"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div class="col-6">
+											<h4 class="cakes__title mt-5">Шоколадный с вишней</h4>
+											<h6 class="cakes__article">Артикул: 6423</h6>
+											<p class="cakes__costs">2 475₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Слои бисквита на кефире с какао, в сочетании с
+												ванильным муссом и вишнёвой начинкой. Торт украшен
+												ганашем, вишней коктейльной и шоколадным декором.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,1 кг</h4>
+											<p class="cakes__text__bzh">
+												Пищевая и энергетическая ценность на 100 г.
+												продукта: белки – 3,92 г.; жиры – 11,79 г.; углеводы
+												– 27,86 г.; 233,27 ккал/ 963,4 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Вишня в сиропе (вишня, вода, сахар), сахар, крем
+												сливочный «сливки для взбивания» (сливки
+												нормализованные), мука пшеничная в/с, молоко
+												питьевое, масло сливочное, продукты яичные
+												пастеризованные, красная коктейльная черешня с
+												веточкой (черешня, вода, сахар, сироп глюкозы,
+												лимонная кислота), пюре фруктовое вишня (пюре
+												вишневое, сахар), шоколад темный (какао-масло,
+												сахар, какао-порошок, соевый лецитин, ароматизатор -
+												ваниль), глазурь кондитерская «Мируар глассаж Нцар»
+												(сироп глюкозный, сахар, вода, какао-порошок,
+												загуститель-желатин пищевой, винная кислота),
+												какао-порошок, желирующий агент пектин,
+												разрыхлитель-сода пищевая (гидрокарбонат натрия),
+												загуститель - желатин пищевой, регулятор кислотности
+												- уксус столовый, ароматизатор натуральный «ваниль»,
+												консервант- сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												следы ингредиентов, вызывающие аллергию (орехи,
+												арахис и продукты их переработки).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-3">
+						<a
+							href="#!"
+							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+							type="button"
+							id="btn"
+							class="btn btn-primary col-1"
+							data-bs-toggle="modal"
+							data-bs-target="#modal_cherry">
+							<img draggable="false" src="img/cake_8.png" alt="" />
+							<h5 class="mt-3 ls_5">Шоколадный с вишней</h5>
+							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
+						</a>
+					</div>
+
+					<div class="col-3">
+						<a
+							href="#!"
+							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+							type="button"
+							id="btn"
+							class="btn btn-primary col-1"
+							data-bs-toggle="modal"
+							data-bs-target="#modal_ny">
+							<img draggable="false" src="img/cake_9.png" alt="" />
+							<h5 class="mt-3 ls_5">Чизкейк "Нью-Йорк" <br />с апельсином</h5>
+							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
+						</a>
+					</div>
+
+					<div class="modal overflow-y-scroll fade" id="modal_ny" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-6">
+											<img
+												src="./img/cake_6_full.jpg"
+												draggable="false"
+												width="530"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div class="col-6">
+											<h4 class="cakes__title mt-5">
+												Чиз-кейк "Нью-Йорк" с апельсином
+											</h4>
+											<h6 class="cakes__article">Артикул: 10188</h6>
+											<p class="cakes__costs">1 490₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Нежная сырная выпечная масса из творожного сыра на
+												тонкой песочной основе.Торт декорирован свежими
+												апельсинами и грейпфрутом, украшен фирменным
+												логотипом.
+											</p>
+											<h4 class="cakes__ves">Вес: 0,750 кг</h4>
+											<p class="cakes__text__bzh">
+												Пищевая и энергетическая ценность на 100 г.
+												продукта: белки – 5 г.; жиры – 17 г.; углеводы – 27
+												г.; 280 ккал/ 1170 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												сыр творожный м.д.ж. 65% (нормализованное
+												пастеризованное молоко, молокосвертывающий фермент
+												микробного происхождения, закваска бактериальная
+												стабилизатор-камедь рожкового дерева, соль), сахар,
+												мука пшеничная в/с, апельсин свежий, масло
+												сладко-сливочное м.д.ж. 82,5% (пастеризованные
+												сливки), продукты яичные пастеризованные (белок,
+												желток), грейпфрут свежий, глазурь «Армони
+												нейтральная» (вода питьевая, сахар, сироп глюкозный,
+												пектин, регулятор кислотности лимонная кислота),
+												пюре апельсина (апельсин), сметана м.д.ж. 20%
+												(сливки нормализованные, заквасочные
+												микроорганизмы), сливки питьевые
+												ультрапастеризованные м.д.ж 33%, шоколад темный
+												(какао масса, сахар, какао-масло, эмульгатор (
+												соевый лецитин), ароматизатор ванилин), загуститель
+												- желатин пищевой, краситель куркума, ароматизатор –
+												ванилин, регулятор кислотности – лимонная кислота,
+												шоколад белый (сахар, масло какао, молоко сухое
+												цельное, эмульгатор -лецитин соевый, ароматизатор
+												ванилин), соль пищевая, консервант - сорбиновая
+												кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="col-3 bg-color__cake"></div>
 					<div class="col-3">
 						<a
 							href="#!"
 							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_7.png" alt="" />
-							<h5 class="mt-3 ls_5">Маракайбо</h5>
-							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
+							<img draggable="false" src="img/cake_1.png" alt="" />
+							<h5 class="mt-3 ls_5">Ришелье</h5>
+							<h6 class="mt-4 fw-normal mb-5">2 450 ₽</h6>
 						</a>
 					</div>
 					<div class="col-3">
 						<a
 							href="#!"
 							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_8.png" alt="" />
-							<h5 class="mt-3 ls_5">Шоколадный с вишней</h5>
-							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
+							<img draggable="false" src="img/cake_2.png" alt="" />
+							<h5 class="mt-3 ls_5">Трюфель</h5>
+							<h6 class="mt-4 fw-normal mb-5">2 605 ₽</h6>
 						</a>
 					</div>
 					<div class="col-3">
 						<a
 							href="#!"
 							class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left">
-							<img src="img/cake_9.png" alt="" />
-							<h5 class="mt-3 ls_5">Чизкейк "Нью-Йорк" <br />с апельсином</h5>
-							<h6 class="mt-4 fw-normal mb-5">4 800 ₽</h6>
+							<img draggable="false" src="img/cake_3.png" alt="" />
+							<h5 class="mt-3 ls_5">Венера</h5>
+							<h6 class="mt-4 fw-normal mb-5">2 125 ₽</h6>
 						</a>
 					</div>
 					<div class="col-3 bg-color__cake"></div>
