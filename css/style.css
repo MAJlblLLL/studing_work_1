@@ -137,6 +137,10 @@ body {
 	font-size: 16px;
 }
 
+.fs-18 {
+	font-size: 18px;
+}
+
 .fs-24 {
 	font-size: 24px;
 }
@@ -188,7 +192,7 @@ body {
 }
 
 .mt-101 {
-	margin-top: 101px;
+	margin-top: 101px !important;
 }
 
 .create__cake {
@@ -217,6 +221,21 @@ body {
 
 .mb-118 {
 	margin-bottom: 118px;
+}
+.mb-100 {
+	margin-bottom: 100px;
+}
+
+.mb-237 {
+	margin-bottom: 237px;
+}
+
+.lh-160 {
+	line-height: 160%;
+}
+
+.fs-26 {
+	font-size: 26px;
 }
 
 .bg_color__nubmer {
@@ -265,22 +284,34 @@ body {
 	font-size: 60px;
 }
 
-.svg {
-	background-color: gray;
+.bg__input {
+	background-color: rgba(237, 237, 237, 0.796);
+	border: 1px solid rgb(158, 158, 158);
+	padding: 2px 10px;
+	border-start-start-radius: 5px;
+	border-end-start-radius: 5px;
+	font-weight: 300;
 }
 
-.bg__input {
-	background-color: rgba(190, 190, 190, 0.5);
-	border: 0px;
-	padding: 1px 1px;
-	border-radius: 5px;
+.bg__input__svg {
+	background-color: rgba(237, 237, 237, 0.796);
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-right: 1px solid rgb(158, 158, 158);
+	border-top: 1px solid rgb(158, 158, 158);
+	border-bottom: 1px solid rgb(158, 158, 158);
+	border-end-end-radius: 5px;
+	border-start-end-radius: 5px;
 }
 
 .bg__cb {
-	background-color: rgba(190, 190, 190, 0.5);
-	border: 0px;
-
+	background-color: rgba(237, 237, 237, 0.796);
+	border: 1px solid rgb(158, 158, 158);
+	padding: 2px 10px;
 	border-radius: 5px;
+	font-weight: 300;
+	height: 30px;
 }
 
 .bg-color__cake {
@@ -332,6 +363,13 @@ body {
 	letter-spacing: -1px;
 }
 
+.ls-2 {
+	letter-spacing: 2px;
+}
+
+.sp-4 {
+	word-spacing: 4px;
+}
 .ls_6 {
 	letter-spacing: -1.6px;
 }
@@ -425,6 +463,10 @@ body {
 
 .mr-150 {
 	margin-right: 150px;
+}
+
+.mb-57 {
+	margin-bottom: 57px;
 }
 
 .mb-28 {
