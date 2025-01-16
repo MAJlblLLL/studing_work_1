@@ -75,8 +75,8 @@ body {
   background-color: #7e7ab8;
 
   @media (max-width: 575px) {
-    width: 200px;
-    left: -70px;
+    width: 190px;
+    left: -49px;
   }
 }
 
@@ -89,8 +89,8 @@ body {
   background-color: #acacac;
 
   @media (max-width: 575px) {
-    width: 200px;
-    left: -37px;
+    width: 190px;
+    left: -25px;
   }
 }
 
@@ -336,6 +336,12 @@ body {
 .mb-sm-6 {
   @media (max-width: 990px) {
     margin-bottom: 30px;
+  }
+}
+
+.mt-sm-5 {
+  @media (max-width: 765px) {
+    margin-top: 10px;
   }
 }
 
@@ -678,4 +684,17 @@ body {
 .width {
   width: 250px;
   height: 389px;
+}
+
+.title__text__main {
+  @media (max-width: 577px) {
+    font-size: 50px !important;
+    margin-top: 120px !important;
+  }
+}
+
+.image__main {
+  @media (max-width: 990px) {
+    display: none !important;
+  }
 }
