@@ -1,365 +1,425 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Пирожные</title>
-		<link rel="stylesheet" href="./css/bootstrap.css" />
-		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-			rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet" />
-		<style>
-			body {
-				margin: 0;
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<nav class="navbar navbar-expand-lg bg-light">
-				<div class="container-fluid container">
-					<a class="navbar-brand" href="index.html">
-						<img src="./img/LOGO.svg" alt="" />
-					</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Переключатель навигации">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<div class="mx-auto">
-							<ul class="navbar-nav gap-5">
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-tort"
-										href="torts.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover">
-										<span id="nav-under-tort"></span> ТОРТЫ</a
-									>
-								</li>
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-pir"
-										href="cakes.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-										><span id="nav-under-pir_pir"></span>ПИРОЖНЫЕ</a
-									>
-								</li>
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-info"
-										href="information.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-										><span id="nav-under-info"></span>ИНФОРМАЦИЯ</a
-									>
-								</li>
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-delivery"
-										href="delivery.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-										><span id="nav-under-delivery"></span>ДОСТАВКА</a
-									>
-								</li>
-							</ul>
-						</div>
-						<div class="col-3 info">
-							<div class="d-flex">
-								<div class="d-grid">
-									<p class="mb-0">+79113021706</p>
-									<p class="mb-0">info@danddbroyal.ru</p>
-									<p class="mb-0">@danddroyalbakery</p>
-								</div>
-								<div class="d-flex align-items-center justify-content-center ms-3">
-									<a href="#!">
-										<img src="./img/TG.svg" alt="" />
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пирожные</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid container">
+          <a class="navbar-brand" href="index.html">
+            <img src="./img/LOGO.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Переключатель навигации"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="mx-auto">
+              <ul class="navbar-nav gap-5">
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-tort"
+                    href="torts.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                  >
+                    <span id="nav-under-tort"></span> ТОРТЫ</a
+                  >
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-pir"
+                    href="cakes.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                    ><span id="nav-under-pir_pir"></span>ПИРОЖНЫЕ</a
+                  >
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-info"
+                    href="information.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                    ><span id="nav-under-info"></span>ИНФОРМАЦИЯ</a
+                  >
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-delivery"
+                    href="delivery.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                    ><span id="nav-under-delivery"></span>ДОСТАВКА</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-3 info">
+              <div class="d-flex">
+                <div class="d-grid">
+                  <p class="mb-0">+79113021706</p>
+                  <p class="mb-0">info@danddbroyal.ru</p>
+                  <p class="mb-0">@danddroyalbakery</p>
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center ms-3"
+                >
+                  <a href="#!">
+                    <img src="./img/TG.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-		<main>
-			<div>
-				<img class="img" src="img/bg_cakes.jpg" alt="" />
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-12 d-flex justify-content-center">
-						<img src="img/cakes_title.png" alt="" />
-					</div>
-					<div class="col-12 fs-60px fw-bold d-flex justify-content-center">
-						Каталог пирожных
-					</div>
+    <main>
+      <div>
+        <img class="img" src="img/bg_cakes.jpg" alt="" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center">
+            <img src="img/cakes_title.png" alt="" />
+          </div>
+          <div class="col-12 fs-60px fw-bold d-flex justify-content-center">
+            Каталог пирожных
+          </div>
 
-					<div class="col-12 d-flex justify-content-end gap-5 mt-101">
-						<div class="">
-							<input type="text" name="find" placeholder="Поиск" class="bg__input" />
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								x="0px"
-								y="0px"
-								width="20"
-								height="20"
-								viewBox="0 0 50 50"
-								style="fill: #000000"
-								class="bg__input__svg">
-								<path
-									d="M 21 4 C 11.082241 4 3 12.082241 3 22 C 3 31.917759 11.082241 40 21 40 C 24.62177 40 27.99231 38.91393 30.820312 37.0625 L 43.378906 49.621094 L 47.621094 45.378906 L 35.224609 32.982422 C 37.581469 29.938384 39 26.13473 39 22 C 39 12.082241 30.917759 4 21 4 z M 21 8 C 28.756241 8 35 14.243759 35 22 C 35 29.756241 28.756241 36 21 36 C 13.243759 36 7 29.756241 7 22 C 7 14.243759 13.243759 8 21 8 z"></path>
-							</svg>
-						</div>
-						<div class="mb-5">
-							<select name="filter" id="#!" class="bg__cb">
-								<option value="">Порядок: По умолчанию</option>
-								<option value="">Цена: по возрастанию</option>
-								<option value="">Цена: по убыванию</option>
-								<option value="">Название: А-Я</option>
-								<option value="">Название: Я-А</option>
-								<option value="">Порядок: сперва новые</option>
-								<option value="">Порядок: сперва старые</option>
-							</select>
-						</div>
-					</div>
-					<div class="col-3 bg-color__cake">
-						<h6>Раздел</h6>
-						<br />
-						<input
-							type="checkbox"
-							name="bento"
-							id="myCheckBox_bento"
-							class="custom__cb" />
-						<label for="myCheckBox_bento">Классические пирожные</label>
-						<br />
-						<input
-							type="checkbox"
-							name="biscuit"
-							id="myCheckBox_biscuit"
-							class="custom__cb" />
-						<label for="myCheckBox_biscuit">Макарони пирожное</label>
-						<br />
-						<input
-							type="checkbox"
-							name="children"
-							id="myCheckBox_children"
-							class="custom__cb" />
-						<label for="myCheckBox_children">Наборы пирожных</label>
-						<br />
-						<input
-							type="checkbox"
-							name="classic"
-							id="myCheckBox_classic"
-							class="custom__cb" />
-						<label for="myCheckBox_classic">Пирожные</label>
-						<br />
-						<input
-							type="checkbox"
-							name="original"
-							id="myCheckBox_original"
-							class="custom__cb" />
-						<label for="myCheckBox_original">Пирожные суфле</label>
-						<br />
-						<input
-							type="checkbox"
-							name="cake"
-							id="myCheckBox_cake"
-							class="custom__cb" />
-						<label for="myCheckBox_cake">Пирожные эклер</label>
-					</div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_1.png" alt="" />
-							<h5 class="mt-3 ls_5">LoVe</h5>
-							<h6 class="pt-4 fw-normal">420 ₽</h6>
-						</a>
-					</div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_2.png" alt="" />
-							<h5 class="mt-3 ls_6">Манго</h5>
-							<h6 class="mt-4 fw-normal mb-5">490 ₽</h6>
-						</a>
-					</div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_3.png" alt="" />
-							<h5 class="mt-3 ls_5">Гурмэ</h5>
-							<h6 class="mt-4 fw-normal mb-5">400 ₽</h6>
-						</a>
-					</div>
-					<div class="col-3 bg-color__cake"></div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_4.png" alt="" />
-							<h5 class="mt-3 ls_5">Эквадор</h5>
-							<h6 class="mt-4 fw-normal mb-5">395 ₽</h6>
-						</a>
-					</div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_5.png" alt="" />
-							<h5 class="mt-3 ls_5">Трюфель</h5>
-							<h6 class="mt-4 fw-normal mb-5">450 ₽</h6>
-						</a>
-					</div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_6.png" alt="" />
-							<h5 class="mt-3 ls_5">Кардинал</h5>
-							<h6 class="mt-4 fw-normal mb-5">480 ₽</h6>
-						</a>
-					</div>
-					<div class="col-3 bg-color__cake"></div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_7.png" alt="" />
-							<h5 class="mt-3 ls_5">Бейлис</h5>
-							<h6 class="mt-4 fw-normal mb-5">355 ₽</h6>
-						</a>
-					</div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_8.png" alt="" />
-							<h5 class="mt-3 ls_5">Элеганс</h5>
-							<h6 class="mt-4 fw-normal mb-5">435 ₽</h6>
-						</a>
-					</div>
-					<div
-						class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5">
-						<a
-							href="#!"
-							class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250">
-							<img src="img/cakes_9.png" alt="" />
-							<h5 class="mt-3 ls_5">Черника с маком</h5>
-							<h6 class="mt-4 fw-normal mb-5">375 ₽</h6>
-						</a>
-					</div>
-					<div class="col-3 bg-color__cake"></div>
-					<div class="col-9 d-flex justify-content-end mb-5">
-						<button class="btn_stil">Загрузить ещё</button>
-					</div>
-				</div>
-			</div>
-		</main>
-		<section class="bg__ready pb-122">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<h2 class="ready__title">Пирожные и десерты <br />D & D Royal</h2>
-						<h5 class="ready__text__left fs-5 ls_5">
-							В кондитерской Крем Роял можно купить готовые пирожные с доставкой по
-							Москве и Московской области. Мы занимаемся изготовлением пирожных и
-							десертов с 2006 года и наш опыт позволяет предлагать лучшие цены от
-							производителя.
-						</h5>
-					</div>
-					<div class="col-6">
-						<h5 class="ready__text__right fs-5 ls_5">
-							В каталоге вы найдете более 30 видов пирожных и десертов с на любой
-							вкус. Помимо классических пирожных таких как: картошка, эклер, макарони,
-							капкейки, пирожные суфле и из песочного теста, вы найдете пирожные,
-							изготовленные по авторскому рецепту от нашего шефа: маракайбо, бейлис,
-							джованни, бальтазар, элеганс, вегнские десерты и другие. Все пирожные в
-							наличии и доступы для заказа онлайн на нашем сайте.
-						</h5>
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer class="bg_footer pt-4">
-			<div class="container">
-				<div class="row">
-					<div class="col-3">
-						<a href="index.html">
-							<img class="mb-4" src="./img/LOGO.svg" alt="" />
-						</a>
-						<p class="m-0">© 2024 D&D ROYAL</p>
-						<a class="color__pol" href="#!">Политика конфиденциальности</a>
-					</div>
-					<div class="col-3 d-grid">
-						<h4 class="mb-6">ТОРТЫ</h4>
-						<a class="mb-7 text-black text-decoration-none" href="">Торты на заказ</a>
-						<a class="mb-7 text-black text-decoration-none" href=""
-							>Торты на день рождения</a
-						>
-						<a class="mb-7 text-black text-decoration-none" href=""
-							>Классические торты</a
-						>
-						<a class="mb-7 text-black text-decoration-none" href="">Бисквитные торты</a>
-						<a class="mb-7 text-black text-decoration-none" href="">Детские торты</a>
-						<a class="mb-7 text-black text-decoration-none" href=""
-							>Украшения для тортов</a
-						>
-					</div>
-					<div class="col-3 d-grid">
-						<h4>ПИРОЖНЫЕ</h4>
-						<a class="text-black text-decoration-none" href="">Набор пирожных</a>
-						<a class="text-black text-decoration-none" href="">Макарони пирожные</a>
-						<a class="text-black text-decoration-none" href="">Пирожные эклер</a>
-						<a class="text-black text-decoration-none" href="">Пирожнеы суфле</a>
-						<a class="text-black text-decoration-none" href="">Веганские десерты</a>
-					</div>
-					<div class="col-3 d-grid">
-						<h4>ДЛЯ КЛИЕНТОВ</h4>
-						<a class="text-black text-decoration-none" href=""
-							>Каталог тортов и пирожных</a
-						>
-						<a class="text-black text-decoration-none" href="">Доставка и оплата</a>
-						<a class="text-black text-decoration-none" href="">О кондитерской</a>
-						<a class="text-black text-decoration-none" href="">Карта сайта</a>
-						<a class="text-black text-decoration-none" href="">Контакты</a>
-					</div>
-					<div class="col-12 d-flex mt-5">
-						<p>Способ оплаты</p>
-						<a href=""><img src="./img/pay.png" alt="" /></a>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script src="./js/main.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	</body>
+          <div class="col-12 d-flex justify-content-end gap-5 mt-101">
+            <div class="">
+              <input
+                type="text"
+                name="find"
+                placeholder="Поиск"
+                class="bg__input"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 50 50"
+                style="fill: #000000"
+                class="bg__input__svg"
+              >
+                <path
+                  d="M 21 4 C 11.082241 4 3 12.082241 3 22 C 3 31.917759 11.082241 40 21 40 C 24.62177 40 27.99231 38.91393 30.820312 37.0625 L 43.378906 49.621094 L 47.621094 45.378906 L 35.224609 32.982422 C 37.581469 29.938384 39 26.13473 39 22 C 39 12.082241 30.917759 4 21 4 z M 21 8 C 28.756241 8 35 14.243759 35 22 C 35 29.756241 28.756241 36 21 36 C 13.243759 36 7 29.756241 7 22 C 7 14.243759 13.243759 8 21 8 z"
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-5">
+              <select name="filter" id="#!" class="bg__cb">
+                <option value="">Порядок: По умолчанию</option>
+                <option value="">Цена: по возрастанию</option>
+                <option value="">Цена: по убыванию</option>
+                <option value="">Название: А-Я</option>
+                <option value="">Название: Я-А</option>
+                <option value="">Порядок: сперва новые</option>
+                <option value="">Порядок: сперва старые</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3 bg-color__cake">
+            <h6>Раздел</h6>
+            <br />
+            <input
+              type="checkbox"
+              name="bento"
+              id="myCheckBox_bento"
+              class="custom__cb"
+            />
+            <label for="myCheckBox_bento">Классические пирожные</label>
+            <br />
+            <input
+              type="checkbox"
+              name="biscuit"
+              id="myCheckBox_biscuit"
+              class="custom__cb"
+            />
+            <label for="myCheckBox_biscuit">Макарони пирожное</label>
+            <br />
+            <input
+              type="checkbox"
+              name="children"
+              id="myCheckBox_children"
+              class="custom__cb"
+            />
+            <label for="myCheckBox_children">Наборы пирожных</label>
+            <br />
+            <input
+              type="checkbox"
+              name="classic"
+              id="myCheckBox_classic"
+              class="custom__cb"
+            />
+            <label for="myCheckBox_classic">Пирожные</label>
+            <br />
+            <input
+              type="checkbox"
+              name="original"
+              id="myCheckBox_original"
+              class="custom__cb"
+            />
+            <label for="myCheckBox_original">Пирожные суфле</label>
+            <br />
+            <input
+              type="checkbox"
+              name="cake"
+              id="myCheckBox_cake"
+              class="custom__cb"
+            />
+            <label for="myCheckBox_cake">Пирожные эклер</label>
+          </div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <div>
+              <a
+                href="#!"
+                class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+              >
+                <img src="img/cakes_1.png" alt="" />
+                <h5 class="mt-3 ls_5">LoVe</h5>
+                <h6 class="pt-4 fw-normal">420 ₽</h6>
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_2.png" alt="" />
+              <h5 class="mt-3 ls_6">Манго</h5>
+              <h6 class="mt-4 fw-normal mb-5">490 ₽</h6>
+            </a>
+          </div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_3.png" alt="" />
+              <h5 class="mt-3 ls_5">Гурмэ</h5>
+              <h6 class="mt-4 fw-normal mb-5">400 ₽</h6>
+            </a>
+          </div>
+          <div class="col-3 bg-color__cake"></div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_4.png" alt="" />
+              <h5 class="mt-3 ls_5">Эквадор</h5>
+              <h6 class="mt-4 fw-normal mb-5">395 ₽</h6>
+            </a>
+          </div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_5.png" alt="" />
+              <h5 class="mt-3 ls_5">Трюфель</h5>
+              <h6 class="mt-4 fw-normal mb-5">450 ₽</h6>
+            </a>
+          </div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_6.png" alt="" />
+              <h5 class="mt-3 ls_5">Кардинал</h5>
+              <h6 class="mt-4 fw-normal mb-5">480 ₽</h6>
+            </a>
+          </div>
+          <div class="col-3 bg-color__cake"></div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_7.png" alt="" />
+              <h5 class="mt-3 ls_5">Бейлис</h5>
+              <h6 class="mt-4 fw-normal mb-5">355 ₽</h6>
+            </a>
+          </div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_8.png" alt="" />
+              <h5 class="mt-3 ls_5">Элеганс</h5>
+              <h6 class="mt-4 fw-normal mb-5">435 ₽</h6>
+            </a>
+          </div>
+          <div
+            class="col-3 width_250 d-grid justify-content-end align-items text-left mb-5"
+          >
+            <a
+              href="#!"
+              class="text-dark link-offset-2 link-underline link-underline-opacity-0 width_250"
+            >
+              <img src="img/cakes_9.png" alt="" />
+              <h5 class="mt-3 ls_5">Черника с маком</h5>
+              <h6 class="mt-4 fw-normal mb-5">375 ₽</h6>
+            </a>
+          </div>
+          <div class="col-3 bg-color__cake"></div>
+          <div class="col-9 d-flex justify-content-end mb-5">
+            <button class="btn_stil">Загрузить ещё</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="bg__ready pb-122">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h2 class="ready__title">Пирожные и десерты <br />D & D Royal</h2>
+            <h5 class="ready__text__left fs-5 ls_5">
+              В кондитерской Крем Роял можно купить готовые пирожные с доставкой
+              по Мурманску и Мурманской области. Мы занимаемся изготовлением
+              пирожных и десертов с 2006 года и наш опыт позволяет предлагать
+              лучшие цены от производителя.
+            </h5>
+          </div>
+          <div class="col-6">
+            <h5 class="ready__text__right fs-5 ls_5">
+              В каталоге вы найдете более 30 видов пирожных и десертов с на
+              любой вкус. Помимо классических пирожных таких как: картошка,
+              эклер, макарони, капкейки, пирожные суфле и из песочного теста, вы
+              найдете пирожные, изготовленные по авторскому рецепту от нашего
+              шефа: маракайбо, бейлис, джованни, бальтазар, элеганс, вегнские
+              десерты и другие. Все пирожные в наличии и доступы для заказа
+              онлайн на нашем сайте.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg_footer pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <a href="index.html">
+              <img class="mb-4" src="./img/LOGO.svg" alt="" />
+            </a>
+            <p class="m-0">© 2024 D&D ROYAL</p>
+            <a class="color__pol" href="#!">Политика конфиденциальности</a>
+          </div>
+          <div class="col-3 d-grid">
+            <h4 class="mb-6">ТОРТЫ</h4>
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Торты на заказ</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Торты на день рождения</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Классические торты</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Бисквитные торты</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Детские торты</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Украшения для тортов</a
+            >
+          </div>
+          <div class="col-3 d-grid">
+            <h4>ПИРОЖНЫЕ</h4>
+            <a class="text-black text-decoration-none" href=""
+              >Набор пирожных</a
+            >
+            <a class="text-black text-decoration-none" href=""
+              >Макарони пирожные</a
+            >
+            <a class="text-black text-decoration-none" href=""
+              >Пирожные эклер</a
+            >
+            <a class="text-black text-decoration-none" href=""
+              >Пирожнеы суфле</a
+            >
+            <a class="text-black text-decoration-none" href=""
+              >Веганские десерты</a
+            >
+          </div>
+          <div class="col-3 d-grid">
+            <h4>ДЛЯ КЛИЕНТОВ</h4>
+            <a class="text-black text-decoration-none" href=""
+              >Каталог тортов и пирожных</a
+            >
+            <a class="text-black text-decoration-none" href=""
+              >Доставка и оплата</a
+            >
+            <a class="text-black text-decoration-none" href=""
+              >О кондитерской</a
+            >
+            <a class="text-black text-decoration-none" href="">Карта сайта</a>
+            <a class="text-black text-decoration-none" href="">Контакты</a>
+          </div>
+          <div class="col-12 d-flex mt-5">
+            <p>Способ оплаты</p>
+            <a href=""><img src="./img/pay.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

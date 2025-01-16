@@ -1,252 +1,310 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Информация</title>
-		<link rel="stylesheet" href="./css/bootstrap.css" />
-		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-			rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet" />
-	</head>
-	<body>
-		<header>
-			<nav class="navbar navbar-expand-lg bg-light">
-				<div class="container-fluid container">
-					<a class="navbar-brand" href="index.html">
-						<img src="./img/LOGO.svg" alt="" />
-					</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Переключатель навигации">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<div class="mx-auto">
-							<ul class="navbar-nav gap-5">
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-tort"
-										href="torts.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover">
-										<span id="nav-under-tort"></span> ТОРТЫ</a
-									>
-								</li>
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-pir"
-										href="cakes.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-										><span id="nav-under-pir"></span>ПИРОЖНЫЕ</a
-									>
-								</li>
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-info"
-										href="information.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-										><span id="nav-under-info_info"></span>ИНФОРМАЦИЯ</a
-									>
-								</li>
-								<li class="nav-item d-flex justify-content-center">
-									<a
-										aria-current="page"
-										id="nav-delivery"
-										href="delivery.html"
-										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-										><span id="nav-under-delivery"></span>ДОСТАВКА</a
-									>
-								</li>
-							</ul>
-						</div>
-						<div class="col-3 info">
-							<div class="d-flex">
-								<div class="d-grid">
-									<p class="mb-0">+79113021706</p>
-									<p class="mb-0">info@danddbroyal.ru</p>
-									<p class="mb-0">@danddroyalbakery</p>
-								</div>
-								<div class="d-flex align-items-center justify-content-center ms-3">
-									<a href="#!">
-										<img src="./img/TG.svg" alt="" />
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Информация</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid container">
+          <a class="navbar-brand" href="index.html">
+            <img src="./img/LOGO.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Переключатель навигации"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="mx-auto">
+              <ul class="navbar-nav gap-5">
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-tort"
+                    href="torts.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                  >
+                    <span id="nav-under-tort"></span> ТОРТЫ</a
+                  >
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-pir"
+                    href="cakes.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                    ><span id="nav-under-pir"></span>ПИРОЖНЫЕ</a
+                  >
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-info"
+                    href="information.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                    ><span id="nav-under-info_info"></span>ИНФОРМАЦИЯ</a
+                  >
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a
+                    aria-current="page"
+                    id="nav-delivery"
+                    href="delivery.html"
+                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+                    ><span id="nav-under-delivery"></span>ДОСТАВКА</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-3 info">
+              <div class="d-flex">
+                <div class="d-grid">
+                  <p class="mb-0">+79113021706</p>
+                  <p class="mb-0">info@danddbroyal.ru</p>
+                  <p class="mb-0">@danddroyalbakery</p>
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center ms-3"
+                >
+                  <a href="#!">
+                    <img src="./img/TG.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-		<main class="bg-black">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 mt-280 mb-80">
-						<h1 class="text-white mt-5 mb-5 fz-52">
-							Кондитерское производство <br />тортов и пирожных
-						</h1>
-					</div>
-					<div class="col-12">
-						<h3 class="we__proiz">
-							Мы производим кондитерские изделия на заказ, а также доставляем готовые
-							торты и <br />наборы пирожных оптом и в розницу по Мурманску и области
-						</h3>
-					</div>
-					<div class="col-3">
-						<a href="#!" class="btn__info">Каталог продукции</a>
-					</div>
-					<div class="col-9 mb-157">
-						<a href="#!" class="btn__info">Заказать с доставкой</a>
-					</div>
-				</div>
-			</div>
-		</main>
+    <main class="bg-black">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-280 mb-80"
+          >
+            <h1 class="text-white mt-5 mb-5 fz-52">
+              Кондитерское производство <br />тортов и пирожных
+            </h1>
+          </div>
+          <div
+            class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+          >
+            <h3 class="we__proiz">
+              Мы производим кондитерские изделия на заказ, а также доставляем
+              готовые торты и <br />наборы пирожных оптом и в розницу по
+              Мурманску и области
+            </h3>
+          </div>
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-4 col-md-5 col-sm-7 col-12 mb-5"
+          >
+            <a href="#!" class="btn__info">Каталог продукции</a>
+          </div>
+          <div
+            class="col-xxl-3 col-xl-6 col-lg-5 col-md-6 col-sm-8 col-12 mb-157"
+          >
+            <a href="#!" class="btn__info">Заказать с доставкой</a>
+          </div>
+        </div>
+      </div>
+    </main>
 
-		<main>
-			<div class="container">
-				<div class="row">
-					<div class="col-7 mt-218">
-						<h1 class="fs-1 fw-bold">Алексей Фокин</h1>
-						<h4 class="fs-5 mb-28 fw-normal">Шеф-директор Кондитерской «D & D Роял»</h4>
-						<svg
-							width="69"
-							height="5"
-							viewBox="0 0 69 5"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg">
-							<line
-								y1="2.5"
-								x2="69"
-								y2="2.5"
-								stroke="black"
-								stroke-opacity="0.5"
-								stroke-width="5" />
-						</svg>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-xxl-7 col-xl-7 col-lg-6 col-md-7 col-sm-12 col-12 mt-218"
+          >
+            <h1 class="fs-1 fw-bold">Алексей Фокин</h1>
+            <h4 class="fs-5 mb-28 fw-normal">
+              Шеф-директор Кондитерской «D & D Роял»
+            </h4>
+            <svg
+              width="69"
+              height="5"
+              viewBox="0 0 69 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                y1="2.5"
+                x2="69"
+                y2="2.5"
+                stroke="black"
+                stroke-opacity="0.5"
+                stroke-width="5"
+              />
+            </svg>
 
-						<p class="fs-5 mt-27 mb-5 fw-normal">
-							Алексей по-настоящему любит свою работу. <br />
-							Стоит лишь посмотреть на то вдохновение, с которым он говорит о <br />
-							своем деле, на его заразительный энтузиазм, на умение подходить ко
-							<br />
-							всему творчески и удивлять окружающих своими работами.
-						</p>
-						<p class="fs-5 fw-normal">
-							Большинство изделий «D & D Роял» – авторские работы Алексея. Даже <br />
-							классические рецепты «Тирамису» и «Трюфель» в исполнении шефа <br />
-							оригинальны.
-						</p>
-					</div>
-					<div class="col-5 mt-148 d-flex justify-content-center">
-						<img src="./img/father.png" alt="" />
-					</div>
-					<div class="col-6 position-relative mt-128">
-						<img src="./img/info_left.png" alt="" />
-						<img
-							src="./img/info_right.png"
-							alt=""
-							class="position-absolute img_right" />
-						<img
-							src="./img/info_bottom.png"
-							alt=""
-							class="position-absolute img_bottom" />
-					</div>
-					<div class="col-6 mt-220 mb-180">
-						<h1 class="mb-5 fs-2 fw-semibold">Фабрика тортов и пирожных</h1>
-						<p>
-							Кондитерское производство «Крем Роял» - семейный <br />
-							бизнес, созданный в 2006 году. <br />
-							Вся наша продукция изготавливается вручную с <br />использованием
-							исключительно натуральных <br />ингредиентов. Именно поэтому все наши
-							десерты<br />
-							безупречны по вкусу и заслуживают статуса премиум-<br />качества.
-							<br />Уникальная технология заморозки позволяет выпустить
-							<br />натуральный продукт с учётом хранения,<br />
-							транспортировки и реализации.
-						</p>
-					</div>
-					<div class="col-12 d-grid justify-content-center text-center">
-						<h1 class="fw-semibold fs-1 mt-180 mb-5">Корпоративным клиентам</h1>
-						<p class="fs-5 fw-light">
-							D & D Royal поставляет свою продукцию в крупнейшие <br />торговые сети,
-							а также кафе и рестораны Мурманску.
-						</p>
-						<p class="mt-74 fs-5 fw-light">+79113021706</p>
-						<p class="fs-5 fw-light">info@danddbroyal.ru</p>
-						<p class="fs-4 fw-light">
-							Свяжитесь с нами, если хотите торты и пирожные высшего <br />
-							качества на своих прилавках.
-						</p>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="bg_footer pt-4">
-			<div class="container">
-				<div class="row">
-					<div class="col-3">
-						<a href="index.html">
-							<img class="mb-4" src="./img/LOGO.svg" alt="" />
-						</a>
-						<p class="m-0">© 2024 D&D ROYAL</p>
-						<a class="color__pol" href="#!">Политика конфиденциальности</a>
-					</div>
-					<div class="col-3 d-grid">
-						<h4 class="mb-6">ТОРТЫ</h4>
-						<a class="mb-7 text-black text-decoration-none" href="">Торты на заказ</a>
-						<a class="mb-7 text-black text-decoration-none" href=""
-							>Торты на день рождения</a
-						>
-						<a class="mb-7 text-black text-decoration-none" href=""
-							>Классические торты</a
-						>
-						<a class="mb-7 text-black text-decoration-none" href="">Бисквитные торты</a>
-						<a class="mb-7 text-black text-decoration-none" href="">Детские торты</a>
-						<a class="mb-7 text-black text-decoration-none" href=""
-							>Украшения для тортов</a
-						>
-					</div>
-					<div class="col-3 d-grid">
-						<h4>ПИРОЖНЫЕ</h4>
-						<a class="text-black text-decoration-none" href="">Набор пирожных</a>
-						<a class="text-black text-decoration-none" href="">Макарони пирожные</a>
-						<a class="text-black text-decoration-none" href="">Пирожные эклер</a>
-						<a class="text-black text-decoration-none" href="">Пирожнеы суфле</a>
-						<a class="text-black text-decoration-none" href="">Веганские десерты</a>
-					</div>
-					<div class="col-3 d-grid">
-						<h4>ДЛЯ КЛИЕНТОВ</h4>
-						<a class="text-black text-decoration-none" href=""
-							>Каталог тортов и пирожных</a
-						>
-						<a class="text-black text-decoration-none" href="">Доставка и оплата</a>
-						<a class="text-black text-decoration-none" href="">О кондитерской</a>
-						<a class="text-black text-decoration-none" href="">Карта сайта</a>
-						<a class="text-black text-decoration-none" href="">Контакты</a>
-					</div>
-					<div class="col-12 d-flex mt-5">
-						<p>Способ оплаты</p>
-						<a href=""><img src="./img/pay.png" alt="" /></a>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script src="./js/main.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	</body>
+            <p class="fs-5 mt-27 mb-5 fw-normal">
+              Алексей по-настоящему любит свою работу. <br />
+              Стоит лишь посмотреть на то вдохновение, с которым он говорит о
+              <br />
+              своем деле, на его заразительный энтузиазм, на умение подходить ко
+              <br />
+              всему творчески и удивлять окружающих своими работами.
+            </p>
+            <p class="fs-5 fw-normal">
+              Большинство изделий «D & D Роял» – авторские работы Алексея. Даже
+              <br />
+              классические рецепты «Тирамису» и «Трюфель» в исполнении шефа
+              <br />
+              оригинальны.
+            </p>
+          </div>
+          <div
+            class="col-xxl-5 col-xl-5 col-lg-6 col-md-5 col-sm-12 col-12 mt-148 d-flex justify-content-center"
+          >
+            <div class="align-content-center">
+              <img src="./img/father.png" width="100%" alt="" />
+            </div>
+          </div>
+          <div
+            class="col-xxl-6 col-xl-6 col-lg-6 col-md-5 col-sm-12 col-12 position-relative mt-128 d-flex justify-content-center"
+          >
+            <div class="align-content-center">
+              <img src="./img/info_all.png" width="100%" alt="" />
+            </div>
+          </div>
+          <div
+            class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-12 col-12 mt-220 mb-180 d-grid justify-content-center"
+          >
+            <h1 class="mb-5 fs-2 fw-semibold">Фабрика тортов и пирожных</h1>
+            <p>
+              Кондитерское производство «Крем Роял» - семейный <br />
+              бизнес, созданный в 2006 году. <br />
+              Вся наша продукция изготавливается вручную с <br />использованием
+              исключительно натуральных <br />ингредиентов. Именно поэтому все
+              наши десерты<br />
+              безупречны по вкусу и заслуживают статуса премиум-<br />качества.
+              <br />Уникальная технология заморозки позволяет выпустить
+              <br />натуральный продукт с учётом хранения,<br />
+              транспортировки и реализации.
+            </p>
+          </div>
+          <div class="col-12 d-grid justify-content-center text-center">
+            <h1 class="fw-semibold fs-1 mt-180 mb-5">Корпоративным клиентам</h1>
+            <p class="fs-5 fw-light">
+              D & D Royal поставляет свою продукцию в крупнейшие <br />торговые
+              сети, а также кафе и рестораны Мурманску.
+            </p>
+            <p class="mt-74 fs-5 fw-light">+79113021706</p>
+            <p class="fs-5 fw-light">info@danddbroyal.ru</p>
+            <p class="fs-4 fw-light">
+              Свяжитесь с нами, если хотите торты и пирожные высшего <br />
+              качества на своих прилавках.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg_footer pt-4">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 footer_margin"
+          >
+            <a href="index.html">
+              <img class="mb-4" src="./img/LOGO.svg" alt="" />
+            </a>
+            <p class="m-0">© 2024 D&D ROYAL</p>
+            <a class="color__pol" href="#!">Политика конфиденциальности</a>
+          </div>
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 d-grid justify-content-center"
+          >
+            <h4 class="mb-6">ТОРТЫ</h4>
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Торты на заказ</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Торты на день рождения</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Классические торты</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Бисквитные торты</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Детские торты</a
+            >
+            <a class="mb-7 text-black text-decoration-none" href=""
+              >Украшения для тортов</a
+            >
+          </div>
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 d-grid justify-content-center"
+          >
+            <h4 class="mb-sm-6">ПИРОЖНЫЕ</h4>
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Набор пирожных</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Макарони пирожные</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Пирожные эклер</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Пирожнеы суфле</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Веганские десерты</a
+            >
+          </div>
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 d-grid justify-content-center"
+          >
+            <h4 class="mb-sm-6">ДЛЯ КЛИЕНТОВ</h4>
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Каталог тортов и пирожных</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Доставка и оплата</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >О кондитерской</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Карта сайта</a
+            >
+            <a class="mb-sm-7 text-black text-decoration-none" href=""
+              >Контакты</a
+            >
+          </div>
+          <div class="col-12 d-flex mt-5">
+            <p>Способ оплаты</p>
+            <a href=""><img src="./img/pay.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
