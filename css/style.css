@@ -476,7 +476,7 @@ body {
   color: #ffffff;
   font-weight: bold;
   font-size: 15px;
-  padding: 21px 396px;
+  padding: 3.5% 41.5%;
   border: none;
   border-radius: 15px;
 }
@@ -696,5 +696,56 @@ body {
 .image__main {
   @media (max-width: 990px) {
     display: none !important;
+  }
+}
+
+.d-none__cake {
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.btn_stil_div {
+  display: flex;
+  justify-content: end;
+  @media (max-width: 992px) {
+    display: flex;
+    justify-content: center !important;
+  }
+}
+
+.btn_kat_left {
+  display: flex;
+  justify-content: end;
+  @media (max-width: 992px) {
+    display: flex;
+    justify-content: start !important;
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center !important;
+  }
+}
+
+.btn_kat_right {
+  display: flex;
+  justify-content: end;
+  @media (max-width: 992px) {
+    display: flex;
+    justify-content: end !important;
+  }
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center !important;
+    margin-top: 50px !important;
+  }
+}
+
+.cake__list {
+  display: grid;
+  justify-content: end;
+  @media (max-width: 992px) {
+    justify-content: center !important;
   }
 }
