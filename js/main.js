@@ -203,3 +203,56 @@ function showPastries() {
 
 // Инициализация по умолчанию
 showCakes(); // По умолчанию показываем торты
+
+let cartItems = [];
+let cartCount = document.getElementById("cartCount");
+let orderList = document.getElementById("orderList");
+
+// Добавление товара в корзину
+document.getElementById("addToCart").addEventListener("click", function () {
+  const itemName = "Пример товара"; // Название товара
+  cartItems.push(itemName); // Добавляем товар в массив
+
+  // Обновление счетчика корзины
+  cartCount.textContent = cartItems.length;
+
+  // Показ корзины, если еще не видна
+  document.getElementById("cart").style.display = "block";
+
+  // Закрытие модального окна
+  const productModal = bootstrap.Modal.getInstance(
+    document.getElementById("productModal")
+  );
+  productModal.hide();
+});
+
+// Показ корзины при клике
+document.getElementById("cartButton").addEventListener("click", function () {
+  // Обновление списка в модальном окне оформления заказа
+  orderList.innerHTML = "";
+  cartItems.forEach((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    orderList.appendChild(listItem);
+  });
+
+  // Показ модального окна для оформления заказа
+  const orderModal = new bootstrap.Modal(document.getElementById("orderModal"));
+  orderModal.show();
+});
+
+// Обработка оформления заказа
+document.getElementById("placeOrder").addEventListener("click", function () {
+  alert("Заказ оформлен!"); // Завершение действий здесь
+  cartItems = []; // Очистка корзины
+  cartCount.textContent = 0; // Сброс счетчика
+  orderList.innerHTML = ""; // Очистка списка в заказе
+  document.getElementById("cart").style.display = "none"; // Скрывают корзину
+});
+// Закрытие модального окна и удаление backdrop
+document.addEventListener("hidden.bs.modal", function () {
+  const backdrop = document.querySelector(".modal-backdrop");
+  if (backdrop) {
+    backdrop.remove();
+  }
+});
