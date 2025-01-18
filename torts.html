@@ -236,28 +236,95 @@
           </div>
 
           <div
+            id="cart"
+            class="position-fixed top-0 end-0 p-3 col-3"
+            style="display: none"
+          >
+            <button
+              id="cartButton"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#orderModal"
+            >
+              Корзина (<span id="cartCount">0</span>)
+            </button>
+          </div>
+
+          <div
+            class="modal fade"
+            id="orderModal"
+            tabindex="-1"
+            aria-labelledby="orderModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="orderModalLabel">
+                    Оформление заказа
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Закрыть"
+                  ></button>
+                </div>
+                <div class="modal-body" id="orderContent">
+                  <p>Товары в заказе:</p>
+                  <ul id="orderList"></ul>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Закрыть
+                  </button>
+                  <button id="placeOrder" type="button" class="btn btn-primary">
+                    Оформить заказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
             class="modal overflow-y-scroll fade"
             id="modal_car"
             tabindex="-1"
+            aria-labelledby="productModalLabel"
+            aria-hidden="true"
           >
             <div class="modal-dialog modal-xl">
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_1_full.jpg"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                         draggable="false"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Карамельный</h4>
                       <h6 class="cakes__article">Артикул: 10221</h6>
                       <p class="cakes__costs">1 370₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
+                      <button
+                        class="cakes__btn mb-4"
+                        id="addToCart"
+                        class="btn btn-success"
+                      >
+                        Заказать
+                      </button>
                       <p class="cakes__title__text">
                         В основе - оригинальный бисквит, пропитанный сиропом с
                         добавлением <br />
@@ -347,16 +414,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_2_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Джованни</h4>
                       <h6 class="cakes__article">Артикул: 4595</h6>
                       <p class="cakes__costs">2 420₽</p>
@@ -451,16 +522,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_3_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Эквадор (три шоколада)</h4>
                       <h6 class="cakes__article">Артикул: 3088</h6>
                       <p class="cakes__costs">2 725₽</p>
@@ -541,16 +616,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_4_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Маракайбо</h4>
                       <h6 class="cakes__article">Артикул: 2989</h6>
                       <p class="cakes__costs">3 000₽</p>
@@ -633,16 +712,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_5_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Шоколадный с вишней</h4>
                       <h6 class="cakes__article">Артикул: 6423</h6>
                       <p class="cakes__costs">2 475₽</p>
@@ -744,16 +827,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_6_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">
                         Чиз-кейк "Нью-Йорк" с апельсином
                       </h4>
@@ -846,16 +933,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_7_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Ришелье</h4>
                       <h6 class="cakes__article">Артикул: 3037</h6>
                       <p class="cakes__costs">2 450₽</p>
@@ -939,16 +1030,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_8_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Трюфель</h4>
                       <h6 class="cakes__article">Артикул: 9756</h6>
                       <p class="cakes__costs">2 605 ₽</p>
@@ -1038,16 +1133,20 @@
               <div class="modal-content">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <img
                         src="./img/cake_9_full.jpg"
                         draggable="false"
-                        width="530"
+                        width="100%"
                         alt=""
                         class="mt-5"
                       />
                     </div>
-                    <div class="col-6">
+                    <div
+                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
+                    >
                       <h4 class="cakes__title mt-5">Венера</h4>
                       <h6 class="cakes__article">Артикул: 5105</h6>
                       <p class="cakes__costs">2 125 ₽</p>
