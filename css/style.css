@@ -23,12 +23,11 @@ body {
 
 .button {
   background-color: #7e7ab8;
+  transition: ease 0.2s;
 
   &:hover {
     transition: ease 0.5s;
     opacity: 0.7;
-
-    transform: scale(2, 0.5);
   }
 }
 
@@ -444,7 +443,7 @@ body {
 
 .custom__cb:checked + label::before {
   border-color: #222121;
-  background-image: url(/img/check.svg);
+  background-image: url(../img/check.svg);
   background-size: contain;
 }
 
@@ -514,7 +513,7 @@ body {
 }
 
 .mt-280 {
-  margin-top: 280px;
+  margin-top: 200px;
 }
 
 .fz-52 {
@@ -687,9 +686,9 @@ body {
 }
 
 .title__text__main {
-  @media (max-width: 577px) {
+  @media (max-width: 576px) {
     font-size: 50px !important;
-    margin-top: 120px !important;
+    margin-top: 10px !important;
   }
 }
 
@@ -747,5 +746,26 @@ body {
   justify-content: end;
   @media (max-width: 992px) {
     justify-content: center !important;
+  }
+}
+
+.video {
+  background: #000000;
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.video video {
+  opacity: 0.2;
+}
+
+.d-video {
+  @media (max-width: 1899px) {
+  }
+  @media (max-width: 767px) {
+    height: 100%;
   }
 }
