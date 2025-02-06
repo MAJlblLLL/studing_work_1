@@ -23,6 +23,56 @@
       body {
         margin: 0;
       }
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 21px;
+      }
+
+      /* Hide the checkbox input */
+      .toggle input {
+        display: none;
+      }
+
+      /* Describe slider's look and position. */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: gray;
+        transition: 0.4s;
+        border-radius: 17px;
+      }
+
+      /* Describe the white ball's location 
+              and appearance in the slider. */
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+
+      /* Modify the slider's background color to 
+              green once the checkbox has been selected. */
+      input:checked + .slider {
+        background-color: #7e7ab8;
+      }
+
+      /* When the checkbox is checked, shift the 
+              white ball towards the right within the slider. */
+      input:checked + .slider:before {
+        transform: translateX(13px);
+      }
     </style>
     <script defer src="./js/bootstrap.bundle.min.js"></script>
   </head>
@@ -273,6 +323,109 @@
                 <div class="modal-body" id="orderContent">
                   <p>Товары в заказе:</p>
                   <ul id="orderList"></ul>
+                  <hr />
+                  <form action="torts.html" method="get">
+                    <div class="d-grid justify-content-center">
+                      <label for="Second_name"></label>
+                      <input
+                        class="mb-2 border-pink"
+                        type="text"
+                        placeholder="Ваша фамилия"
+                        id="fio1"
+                        name="Second_name"
+                      />
+                      <br />
+                      <input
+                        class="mb-2 border-pink"
+                        type="text"
+                        placeholder="Ваше имя"
+                        id="fio2"
+                        name="First_name"
+                      />
+                      <br />
+                      <input
+                        class="mb-2 border-pink"
+                        type="text"
+                        placeholder="Ваше отчество"
+                        id="fio3"
+                        name="Expecto_patronus"
+                      />
+                      <br />
+                      <input
+                        class="mb-2 border-pink"
+                        type="tel"
+                        placeholder="Ваш телефон"
+                        id="telephone"
+                      />
+                      <br />
+                      <input
+                        class="mb-2 border-pink"
+                        type="email"
+                        placeholder="Ваша почта"
+                        id="email"
+                      />
+                      <br />
+                      <input
+                        class="mb-2 border-pink"
+                        type="text"
+                        placeholder="Ваш адрес"
+                      />
+                      <br />
+                      <fieldset>
+                        <legend class="text-center">
+                          Выберите период доставки
+                        </legend>
+                        <div>
+                          <input
+                            class="border-pink"
+                            type="radio"
+                            id="9-16"
+                            name="time"
+                            checked
+                          />
+                          <label for="9-16">С 9 до 16</label>
+                        </div>
+
+                        <div>
+                          <input type="radio" id="16-21" name="time" />
+                          <label for="time">C 16 до 21</label>
+                        </div>
+                      </fieldset>
+                      <br />
+                      <label for="deliveryoption">По городу</label>
+                      <label class="toggle">
+                        <input type="checkbox" id="deliveryoption" />
+                        <span class="slider"></span>
+                      </label>
+
+                      <br />
+                      <label for="paymentoptionlist"> Способ оплаты </label>
+                      <select
+                        class="mb-2 border-pink"
+                        name="paymentoptionlist"
+                        id="paymentselect"
+                      >
+                        <option value="option1">СБП</option>
+                        <option value="option2">Онлайн по карте</option>
+                        <option value="option3">Картой при получении</option>
+                        <option value="option4">Наличными при получении</option>
+                      </select>
+                      <br />
+                      <textarea
+                        class="border-pink"
+                        placeholder="Ваш комментарий к заказу"
+                        name="commentarea"
+                        id="comment"
+                      ></textarea>
+                    </div>
+                    <button
+                      id="placeOrder"
+                      type="submit"
+                      class="btn btn-primary"
+                    >
+                      Оформить заказ
+                    </button>
+                  </form>
                 </div>
                 <div class="modal-footer">
                   <button
@@ -281,9 +434,6 @@
                     data-bs-dismiss="modal"
                   >
                     Закрыть
-                  </button>
-                  <button id="placeOrder" type="button" class="btn btn-primary">
-                    Оформить заказ
                   </button>
                 </div>
               </div>
@@ -304,18 +454,64 @@
                     <div
                       class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
                     >
-                      <img
-                        src="./img/cake_1_full.jpg"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                        draggable="false"
-                      />
+                      <div
+                        id="carouselExampleFade"
+                        class="carousel slide carousel-fade mt-4"
+                        data-bs-ride="carousel"
+                      >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img
+                              src="./img/cake_4.png"
+                              class="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="./img/cake_1_full.jpg"
+                              class="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="./img/cake_3_full.jpg"
+                              class="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#carouselExampleFade"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#carouselExampleFade"
+                          data-bs-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                     </div>
                     <div
                       class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
                     >
-                      <h4 class="cakes__title mt-5">Карамельный</h4>
+                      <h4 class="cakes__title mt-4">Карамельный</h4>
                       <h6 class="cakes__article">Артикул: 10221</h6>
                       <p class="cakes__costs">1 370₽</p>
                       <button
