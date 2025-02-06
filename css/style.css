@@ -763,9 +763,15 @@ body {
 }
 
 .d-video {
-  @media (max-width: 1899px) {
+  @media (min-width: 1920px) {
+    display: none !important;
   }
-  @media (max-width: 767px) {
-    height: 100%;
+  @media (max-width: 770px) {
+    display: none !important;
   }
+}
+
+.border-pink {
+  border: 2px solid #7e7ab8;
+  border-radius: 5px;
 }
