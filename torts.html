@@ -1,1535 +1,1416 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Торты</title>
-    <link rel="stylesheet" href="./css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-      body {
-        margin: 0;
-      }
-      .toggle {
-        position: relative;
-        display: inline-block;
-        width: 35px;
-        height: 21px;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Торты</title>
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
 
-      /* Hide the checkbox input */
-      .toggle input {
-        display: none;
-      }
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet" />
+		<style>
+			body {
+				margin: 0;
+			}
+			.toggle {
+				position: relative;
+				display: inline-block;
+				width: 35px;
+				height: 21px;
+			}
 
-      /* Describe slider's look and position. */
-      .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: gray;
-        transition: 0.4s;
-        border-radius: 17px;
-      }
+			/* Hide the checkbox input */
+			.toggle input {
+				display: none;
+			}
 
-      /* Describe the white ball's location 
+			/* Describe slider's look and position. */
+			.slider {
+				position: absolute;
+				cursor: pointer;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: gray;
+				transition: 0.4s;
+				border-radius: 17px;
+			}
+
+			/* Describe the white ball's location 
               and appearance in the slider. */
-      .slider:before {
-        position: absolute;
-        content: "";
-        height: 13px;
-        width: 13px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        transition: 0.4s;
-        border-radius: 50%;
-      }
+			.slider:before {
+				position: absolute;
+				content: "";
+				height: 13px;
+				width: 13px;
+				left: 4px;
+				bottom: 4px;
+				background-color: white;
+				transition: 0.4s;
+				border-radius: 50%;
+			}
 
-      /* Modify the slider's background color to 
+			/* Modify the slider's background color to 
               green once the checkbox has been selected. */
-      input:checked + .slider {
-        background-color: #7e7ab8;
-      }
+			input:checked + .slider {
+				background-color: #7e7ab8;
+			}
 
-      /* When the checkbox is checked, shift the 
+			/* When the checkbox is checked, shift the 
               white ball towards the right within the slider. */
-      input:checked + .slider:before {
-        transform: translateX(13px);
-      }
-    </style>
-    <script defer src="./js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid container">
-          <a class="navbar-brand" href="index.html">
-            <img src="./img/LOGO.svg" alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Переключатель навигации"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="mx-auto">
-              <ul class="navbar-nav gap-5">
-                <li class="nav-item d-flex justify-content-center">
-                  <a
-                    aria-current="page"
-                    id="nav-tort"
-                    href="torts.html"
-                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-                  >
-                    <span id="nav-under-tort_tort"></span> ТОРТЫ</a
-                  >
-                </li>
-                <li class="nav-item d-flex justify-content-center">
-                  <a
-                    aria-current="page"
-                    id="nav-pir"
-                    href="cakes.html"
-                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-                    ><span id="nav-under-pir"></span>ПИРОЖНЫЕ</a
-                  >
-                </li>
-                <li class="nav-item d-flex justify-content-center">
-                  <a
-                    aria-current="page"
-                    id="nav-info"
-                    href="information.html"
-                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-                    ><span id="nav-under-info"></span>ИНФОРМАЦИЯ</a
-                  >
-                </li>
-                <li class="nav-item d-flex justify-content-center">
-                  <a
-                    aria-current="page"
-                    id="nav-delivery"
-                    href="delivery.html"
-                    class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
-                    ><span id="nav-under-delivery"></span>ДОСТАВКА</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-3 info">
-              <div class="d-flex">
-                <div class="d-grid">
-                  <p class="mb-0">+79113021706</p>
-                  <p class="mb-0">info@danddbroyal.ru</p>
-                  <p class="mb-0">@danddroyalbakery</p>
-                </div>
-                <div
-                  class="d-flex align-items-center justify-content-center ms-3"
-                  width="100%"
-                >
-                  <a href="#!">
-                    <img src="./img/TG.svg" width="100%" alt="" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+			input:checked + .slider:before {
+				transform: translateX(13px);
+			}
+		</style>
+		<script defer src="./js/bootstrap.bundle.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg bg-light">
+				<div class="container-fluid container">
+					<a class="navbar-brand" href="index.html">
+						<img src="./img/LOGO.svg" alt="" />
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Переключатель навигации">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<div class="mx-auto">
+							<ul class="navbar-nav gap-5">
+								<li class="nav-item d-flex justify-content-center">
+									<a
+										aria-current="page"
+										id="nav-tort"
+										href="torts.html"
+										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover">
+										<span id="nav-under-tort_tort"></span> ТОРТЫ</a
+									>
+								</li>
+								<li class="nav-item d-flex justify-content-center">
+									<a
+										aria-current="page"
+										id="nav-pir"
+										href="cakes.html"
+										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+										><span id="nav-under-pir"></span>ПИРОЖНЫЕ</a
+									>
+								</li>
+								<li class="nav-item d-flex justify-content-center">
+									<a
+										aria-current="page"
+										id="nav-info"
+										href="information.html"
+										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+										><span id="nav-under-info"></span>ИНФОРМАЦИЯ</a
+									>
+								</li>
+								<li class="nav-item d-flex justify-content-center">
+									<a
+										aria-current="page"
+										id="nav-delivery"
+										href="delivery.html"
+										class="active text-black text-decoration-none align-content-center my-text fw-light position-relative nav__hover"
+										><span id="nav-under-delivery"></span>ДОСТАВКА</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="col-3 info">
+							<div class="d-flex">
+								<div class="d-grid">
+									<p class="mb-0">+79113021706</p>
+									<p class="mb-0">info@danddbroyal.ru</p>
+									<p class="mb-0">@danddroyalbakery</p>
+								</div>
+								<div
+									class="d-flex align-items-center justify-content-center ms-3"
+									width="100%">
+									<a href="#!">
+										<img src="./img/TG.svg" width="100%" alt="" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-    <main>
-      <div>
-        <img class="img" src="img/bg_tort.jpg" alt="" />
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <img src="img/kat_tort.png" alt="" />
-          </div>
-          <div
-            class="col-12 fs-60px fw-bold d-flex justify-content-center text-center"
-          >
-            Каталог тортов
-          </div>
+		<main>
+			<div>
+				<img class="img" src="img/bg_tort.jpg" alt="" />
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<img src="img/kat_tort.png" alt="" />
+					</div>
+					<div class="col-12 fs-60px fw-bold d-flex justify-content-center text-center">
+						Каталог тортов
+					</div>
 
-          <div
-            class="col-xxl-9 col-xl-9 col-lg-8 col-md-6 col-sm-12 col-12 btn_kat_left mt-101"
-          >
-            <div class="">
-              <input
-                type="text"
-                name="find"
-                placeholder="Поиск"
-                class="bg__input"
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="20"
-                height="20"
-                viewBox="0 0 50 50"
-                style="fill: #666666"
-                class="bg__input__svg"
-              >
-                <path
-                  d="M 21 4 C 11.082241 4 3 12.082241 3 22 C 3 31.917759 11.082241 40 21 40 C 24.62177 40 27.99231 38.91393 30.820312 37.0625 L 43.378906 49.621094 L 47.621094 45.378906 L 35.224609 32.982422 C 37.581469 29.938384 39 26.13473 39 22 C 39 12.082241 30.917759 4 21 4 z M 21 8 C 28.756241 8 35 14.243759 35 22 C 35 29.756241 28.756241 36 21 36 C 13.243759 36 7 29.756241 7 22 C 7 14.243759 13.243759 8 21 8 z"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 btn_kat_right mt-101"
-          >
-            <div class="mb-5">
-              <select name="filter" id="#!" class="bg__cb">
-                <option value="">Порядок: По умолчанию</option>
-                <option value="">Цена: по возрастанию</option>
-                <option value="">Цена: по убыванию</option>
-                <option value="">Название: А-Я</option>
-                <option value="">Название: Я-А</option>
-                <option value="">Порядок: сперва новые</option>
-                <option value="">Порядок: сперва старые</option>
-              </select>
-            </div>
-          </div>
+					<div
+						class="col-xxl-9 col-xl-9 col-lg-8 col-md-6 col-sm-12 col-12 btn_kat_left mt-101">
+						<div class="">
+							<input type="text" name="find" placeholder="Поиск" class="bg__input" />
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								x="0px"
+								y="0px"
+								width="20"
+								height="20"
+								viewBox="0 0 50 50"
+								style="fill: #666666"
+								class="bg__input__svg">
+								<path
+									d="M 21 4 C 11.082241 4 3 12.082241 3 22 C 3 31.917759 11.082241 40 21 40 C 24.62177 40 27.99231 38.91393 30.820312 37.0625 L 43.378906 49.621094 L 47.621094 45.378906 L 35.224609 32.982422 C 37.581469 29.938384 39 26.13473 39 22 C 39 12.082241 30.917759 4 21 4 z M 21 8 C 28.756241 8 35 14.243759 35 22 C 35 29.756241 28.756241 36 21 36 C 13.243759 36 7 29.756241 7 22 C 7 14.243759 13.243759 8 21 8 z"></path>
+							</svg>
+						</div>
+					</div>
+					<div
+						class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 btn_kat_right mt-101">
+						<div class="mb-5">
+							<select name="filter" id="#!" class="bg__cb">
+								<option value="">Порядок: По умолчанию</option>
+								<option value="">Цена: по возрастанию</option>
+								<option value="">Цена: по убыванию</option>
+								<option value="">Название: А-Я</option>
+								<option value="">Название: Я-А</option>
+								<option value="">Порядок: сперва новые</option>
+								<option value="">Порядок: сперва старые</option>
+							</select>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-12 col-md-0 col-sm-0 col-0 bg-color__cake d-none__cake"
-          >
-            <h6>Раздел</h6>
-            <br />
-            <input
-              type="checkbox"
-              name="bento"
-              id="myCheckBox_bento"
-              class="custom__cb"
-            />
-            <label for="myCheckBox_bento">Бенто-торты</label>
-            <br />
-            <input
-              type="checkbox"
-              name="biscuit"
-              id="myCheckBox_biscuit"
-              class="custom__cb"
-            />
-            <label for="myCheckBox_biscuit">Бисквитные торты</label>
-            <br />
-            <input
-              type="checkbox"
-              name="children"
-              id="myCheckBox_children"
-              class="custom__cb"
-            />
-            <label for="myCheckBox_children">Детские торты</label>
-            <br />
-            <input
-              type="checkbox"
-              name="classic"
-              id="myCheckBox_classic"
-              class="custom__cb"
-            />
-            <label for="myCheckBox_classic">Классические торты</label>
-            <br />
-            <input
-              type="checkbox"
-              name="original"
-              id="myCheckBox_original"
-              class="custom__cb"
-            />
-            <label for="myCheckBox_original">Оригинальные торты</label>
-            <br />
-            <input
-              type="checkbox"
-              name="cake"
-              id="myCheckBox_cake"
-              class="custom__cb"
-            />
-            <label for="myCheckBox_cake">Торты</label>
-            <br />
-            <input
-              type="checkbox"
-              name="birthday"
-              id="myCheckBox_hb"
-              class="custom__cb"
-            />
-            <label for="myCheckBox_hb">Торты на день рождения</label>
-            <br />
-            <input
-              type="checkbox"
-              name="decoration"
-              id="myCheckBox"
-              class="custom__cb"
-            />
-            <label for="myCheckBox">Украшения для торта</label>
-          </div>
+					<div
+						class="col-xxl-3 col-xl-3 col-lg-12 col-md-0 col-sm-0 col-0 bg-color__cake d-none__cake">
+						<h6>Раздел</h6>
+						<br />
+						<input
+							type="checkbox"
+							name="bento"
+							id="myCheckBox_bento"
+							class="custom__cb" />
+						<label for="myCheckBox_bento">Бенто-торты</label>
+						<br />
+						<input
+							type="checkbox"
+							name="biscuit"
+							id="myCheckBox_biscuit"
+							class="custom__cb" />
+						<label for="myCheckBox_biscuit">Бисквитные торты</label>
+						<br />
+						<input
+							type="checkbox"
+							name="children"
+							id="myCheckBox_children"
+							class="custom__cb" />
+						<label for="myCheckBox_children">Детские торты</label>
+						<br />
+						<input
+							type="checkbox"
+							name="classic"
+							id="myCheckBox_classic"
+							class="custom__cb" />
+						<label for="myCheckBox_classic">Классические торты</label>
+						<br />
+						<input
+							type="checkbox"
+							name="original"
+							id="myCheckBox_original"
+							class="custom__cb" />
+						<label for="myCheckBox_original">Оригинальные торты</label>
+						<br />
+						<input
+							type="checkbox"
+							name="cake"
+							id="myCheckBox_cake"
+							class="custom__cb" />
+						<label for="myCheckBox_cake">Торты</label>
+						<br />
+						<input
+							type="checkbox"
+							name="birthday"
+							id="myCheckBox_hb"
+							class="custom__cb" />
+						<label for="myCheckBox_hb">Торты на день рождения</label>
+						<br />
+						<input
+							type="checkbox"
+							name="decoration"
+							id="myCheckBox"
+							class="custom__cb" />
+						<label for="myCheckBox">Украшения для торта</label>
+					</div>
 
-          <div
-            id="cart"
-            class="position-fixed top-0 end-0 p-3 col-3"
-            style="display: none"
-          >
-            <button
-              id="cartButton"
-              class="btn btn-warning"
-              data-bs-toggle="modal"
-              data-bs-target="#orderModal"
-            >
-              Корзина (<span id="cartCount">0</span>)
-            </button>
-          </div>
+					<div
+						id="cart"
+						class="position-fixed top-0 end-0 p-3 col-3"
+						style="display: none">
+						<button
+							id="cartButton"
+							class="btn btn-warning"
+							data-bs-toggle="modal"
+							data-bs-target="#orderModal">
+							Корзина (<span id="cartCount">0</span>)
+						</button>
+					</div>
 
-          <div
-            class="modal fade"
-            id="orderModal"
-            tabindex="-1"
-            aria-labelledby="orderModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="orderModalLabel">
-                    Оформление заказа
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Закрыть"
-                  ></button>
-                </div>
-                <div class="modal-body" id="orderContent">
-                  <p>Товары в заказе:</p>
-                  <ul id="orderList"></ul>
-                  <hr />
-                  <form action="torts.html" method="get">
-                    <div class="d-grid justify-content-center">
-                      <label for="Second_name"></label>
-                      <input
-                        class="mb-2 border-pink"
-                        type="text"
-                        placeholder="Ваша фамилия"
-                        id="fio1"
-                        name="Second_name"
-                      />
-                      <br />
-                      <input
-                        class="mb-2 border-pink"
-                        type="text"
-                        placeholder="Ваше имя"
-                        id="fio2"
-                        name="First_name"
-                      />
-                      <br />
-                      <input
-                        class="mb-2 border-pink"
-                        type="text"
-                        placeholder="Ваше отчество"
-                        id="fio3"
-                        name="Expecto_patronus"
-                      />
-                      <br />
-                      <input
-                        class="mb-2 border-pink"
-                        type="tel"
-                        placeholder="Ваш телефон"
-                        id="telephone"
-                      />
-                      <br />
-                      <input
-                        class="mb-2 border-pink"
-                        type="email"
-                        placeholder="Ваша почта"
-                        id="email"
-                      />
-                      <br />
-                      <input
-                        class="mb-2 border-pink"
-                        type="text"
-                        placeholder="Ваш адрес"
-                      />
-                      <br />
-                      <fieldset>
-                        <legend class="text-center">
-                          Выберите период доставки
-                        </legend>
-                        <div>
-                          <input
-                            class="border-pink"
-                            type="radio"
-                            id="9-16"
-                            name="time"
-                            checked
-                          />
-                          <label for="9-16">С 9 до 16</label>
-                        </div>
+					<div
+						class="modal fade"
+						id="orderModal"
+						tabindex="-1"
+						aria-labelledby="orderModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="orderModalLabel">
+										Оформление заказа
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Закрыть"></button>
+								</div>
+								<div class="modal-body" id="orderContent">
+									<p>Товары в заказе:</p>
+									<hr />
+									<ul id="orderList"></ul>
+									<hr />
+									<form action="torts.html" method="get">
+										<div class="d-grid justify-content-center inputs">
+											<label for="Second_name" class="fw-light"
+												>Ваша фамилия</label
+											>
+											<input
+												class="mb-2 border-pink"
+												type="text"
+												placeholder="Иванов"
+												id="fio1"
+												name="Second_name" />
+											<br />
+											<label for="First_name" class="fw-light"
+												>Ваше имя</label
+											>
+											<input
+												class="mb-2 border-pink"
+												type="text"
+												placeholder="Иван"
+												id="fio2"
+												name="First_name" />
+											<br />
+											<label for="Expecto_patronus" class="fw-light"
+												>Ваше отчество</label
+											>
+											<input
+												class="mb-2 border-pink"
+												type="text"
+												placeholder="Иванович"
+												id="fio3"
+												name="Expecto_patronus" />
+											<br />
+											<label for="telephone" class="fw-light"
+												>Ваш телефон</label
+											>
+											<input
+												class="mb-2 border-pink"
+												type="tel"
+												placeholder="+7(000)000-00-00"
+												id="tel"
+												name="telephone" />
+											<br />
+											<label for="email_name" class="fw-light"
+												>Ваша почта</label
+											>
+											<input
+												class="mb-2 border-pink"
+												type="email"
+												placeholder="example@ddroyal.ru"
+												id="email"
+												name="email_name" />
+											<br />
+											<label for="adress" class="fw-light">Ваш адрес</label>
+											<input
+												class="mb-2 border-pink"
+												type="text"
+												placeholder="Чумбарова-Лучинского 25"
+												name="adress" />
+											<br />
+											<fieldset>
+												<legend class="text-center">
+													Выберите период доставки
+												</legend>
+												<div>
+													<input
+														class="border-pink"
+														type="radio"
+														id="9-16"
+														name="time"
+														checked />
+													<label for="9-16">С 9 до 16</label>
+												</div>
 
-                        <div>
-                          <input type="radio" id="16-21" name="time" />
-                          <label for="time">C 16 до 21</label>
-                        </div>
-                      </fieldset>
-                      <br />
-                      <label for="deliveryoption">По городу</label>
-                      <label class="toggle">
-                        <input type="checkbox" id="deliveryoption" />
-                        <span class="slider"></span>
-                      </label>
+												<div>
+													<input type="radio" id="16-21" name="time" />
+													<label for="time">C 16 до 21</label>
+												</div>
+											</fieldset>
+											<br />
+											<label for="deliveryoption">По городу</label>
+											<label class="toggle">
+												<input type="checkbox" id="deliveryoption" />
+												<span class="slider"></span>
+											</label>
 
-                      <br />
-                      <label for="paymentoptionlist"> Способ оплаты </label>
-                      <select
-                        class="mb-2 border-pink"
-                        name="paymentoptionlist"
-                        id="paymentselect"
-                      >
-                        <option value="option1">СБП</option>
-                        <option value="option2">Онлайн по карте</option>
-                        <option value="option3">Картой при получении</option>
-                        <option value="option4">Наличными при получении</option>
-                      </select>
-                      <br />
-                      <textarea
-                        class="border-pink"
-                        placeholder="Ваш комментарий к заказу"
-                        name="commentarea"
-                        id="comment"
-                      ></textarea>
-                    </div>
-                    <button
-                      id="placeOrder"
-                      type="submit"
-                      class="btn btn-primary"
-                    >
-                      Оформить заказ
-                    </button>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+											<br />
+											<label for="paymentoptionlist"> Способ оплаты </label>
+											<select
+												class="mb-2 border-pink"
+												name="paymentoptionlist"
+												id="paymentselect">
+												<option value="option1">СБП</option>
+												<option value="option2">Онлайн по карте</option>
+												<option value="option3">
+													Картой при получении
+												</option>
+												<option value="option4">
+													Наличными при получении
+												</option>
+											</select>
+											<br />
+											<textarea
+												class="border-pink"
+												placeholder="Ваш комментарий к заказу"
+												name="commentarea"
+												id="comment"></textarea>
+										</div>
+										<div class="d-flex justify-content-center">
+											<button
+												id="placeOrder"
+												type="submit"
+												class="btn border-pink-btn mt-5">
+												Оформить заказ
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_car"
-            tabindex="-1"
-            aria-labelledby="productModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <div
-                        id="carouselExampleFade"
-                        class="carousel slide carousel-fade mt-4"
-                        data-bs-ride="carousel"
-                      >
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img
-                              src="./img/cake_4.png"
-                              class="d-block w-100"
-                              alt="..."
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              src="./img/cake_1_full.jpg"
-                              class="d-block w-100"
-                              alt="..."
-                            />
-                          </div>
-                          <div class="carousel-item">
-                            <img
-                              src="./img/cake_3_full.jpg"
-                              class="d-block w-100"
-                              alt="..."
-                            />
-                          </div>
-                        </div>
-                        <button
-                          class="carousel-control-prev"
-                          type="button"
-                          data-bs-target="#carouselExampleFade"
-                          data-bs-slide="prev"
-                        >
-                          <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button
-                          class="carousel-control-next"
-                          type="button"
-                          data-bs-target="#carouselExampleFade"
-                          data-bs-slide="next"
-                        >
-                          <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                          ></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-4">Карамельный</h4>
-                      <h6 class="cakes__article">Артикул: 10221</h6>
-                      <p class="cakes__costs">1 370₽</p>
-                      <button
-                        class="cakes__btn mb-4"
-                        id="addToCart"
-                        class="btn btn-success"
-                      >
-                        Заказать
-                      </button>
-                      <p class="cakes__title__text">
-                        В основе - оригинальный бисквит, пропитанный сиропом с
-                        добавлением <br />
-                        коньяка, в сочетании с муссами двух видов: карамельный и
-                        ванильный с <br />
-                        кусочками ананаса. Торт покрыт шоколадной глазурью,
-                        украшен шоколадным <br />
-                        декором и карамельным муссом.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 0,8 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Порций: 8 Пищевая и энергетическая ценность на 100 г.
-                        продукта: белки – 4,5 г.; жиры – 12 г.; углеводы – 44
-                        г.; 300 ккал/ 1250 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        сахар, молоко питьевое ультрапастеризованное м.д.ж 3,2%(
-                        молоко цельное, молоко обезжиренное), сливки питьевые
-                        ультрапастеризованные м.д.ж 33%, продукты яичные
-                        пастеризованные, патока крахмальная карамельная, мука
-                        пшеничная в/с, ананасы в сиропе (ананас, вода, сахар,
-                        регулятор кислотности-лимонная кислота), шоколад
-                        молочный ( сахар, какао- масло, сухое молоко, какао-
-                        тертое, эмульгатор-подсолнечный лецитин, ароматизатор
-                        натуральный ваниль), шоколад белый (сахар, масло какао,
-                        молоко сухое цельное, эмульгатор -лецитин соевый,
-                        ароматизатор натуральный ваниль), молоко цельное
-                        сгущенное с сахаром м.д.ж 8,5% ( молоко цельное,
-                        сахара), шоколад темный (какао масса, сахар,
-                        какао-масло, эмульгатор (подсолнечный лецитин),
-                        ароматизатор ваниль), коньяк (дистилляты коньячные, вода
-                        питьевая, сахарный сироп, краситель - сахарный колер),
-                        какао-масло, загуститель - желатин пищевой, краситель -
-                        куркума, ароматизатор – ванилин, консервант - сорбиновая
-                        кислота.
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (яйца, молоко, орехи, ягоды, фрукты,
-                        зерновые культуры, содержащие клейковину и продукты из
-                        них).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div
+						class="modal overflow-y-scroll fade"
+						id="modal_car"
+						tabindex="-1"
+						aria-labelledby="productModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<div
+												id="carouselExampleFade"
+												class="carousel slide carousel-fade mt-4"
+												data-bs-ride="carousel">
+												<div class="carousel-inner">
+													<div class="carousel-item active">
+														<img
+															src="./img/cake_4.png"
+															class="d-block w-100"
+															alt="..." />
+													</div>
+													<div class="carousel-item">
+														<img
+															src="./img/cake_1_full.jpg"
+															class="d-block w-100"
+															alt="..." />
+													</div>
+													<div class="carousel-item">
+														<img
+															src="./img/cake_3_full.jpg"
+															class="d-block w-100"
+															alt="..." />
+													</div>
+												</div>
+												<button
+													class="carousel-control-prev"
+													type="button"
+													data-bs-target="#carouselExampleFade"
+													data-bs-slide="prev">
+													<span
+														class="carousel-control-prev-icon"
+														aria-hidden="true"></span>
+													<span class="visually-hidden">Previous</span>
+												</button>
+												<button
+													class="carousel-control-next"
+													type="button"
+													data-bs-target="#carouselExampleFade"
+													data-bs-slide="next">
+													<span
+														class="carousel-control-next-icon"
+														aria-hidden="true"></span>
+													<span class="visually-hidden">Next</span>
+												</button>
+											</div>
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-4">Карамельный</h4>
+											<h6 class="cakes__article">Артикул: 10221</h6>
+											<p class="cakes__costs">1 370₽</p>
+											<button
+												class="cakes__btn mb-4"
+												id="addToCart"
+												class="btn btn-success">
+												Заказать
+											</button>
+											<p class="cakes__title__text">
+												В основе - оригинальный бисквит, пропитанный сиропом
+												с добавлением <br />
+												коньяка, в сочетании с муссами двух видов:
+												карамельный и ванильный с <br />
+												кусочками ананаса. Торт покрыт шоколадной глазурью,
+												украшен шоколадным <br />
+												декором и карамельным муссом.
+											</p>
+											<h4 class="cakes__ves">Вес: 0,8 кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 8 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 4,5 г.; жиры – 12 г.; углеводы
+												– 44 г.; 300 ккал/ 1250 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												сахар, молоко питьевое ультрапастеризованное м.д.ж
+												3,2%( молоко цельное, молоко обезжиренное), сливки
+												питьевые ультрапастеризованные м.д.ж 33%, продукты
+												яичные пастеризованные, патока крахмальная
+												карамельная, мука пшеничная в/с, ананасы в сиропе
+												(ананас, вода, сахар, регулятор кислотности-лимонная
+												кислота), шоколад молочный ( сахар, какао- масло,
+												сухое молоко, какао- тертое, эмульгатор-подсолнечный
+												лецитин, ароматизатор натуральный ваниль), шоколад
+												белый (сахар, масло какао, молоко сухое цельное,
+												эмульгатор -лецитин соевый, ароматизатор натуральный
+												ваниль), молоко цельное сгущенное с сахаром м.д.ж
+												8,5% ( молоко цельное, сахара), шоколад темный
+												(какао масса, сахар, какао-масло, эмульгатор
+												(подсолнечный лецитин), ароматизатор ваниль), коньяк
+												(дистилляты коньячные, вода питьевая, сахарный
+												сироп, краситель - сахарный колер), какао-масло,
+												загуститель - желатин пищевой, краситель - куркума,
+												ароматизатор – ванилин, консервант - сорбиновая
+												кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_car"
-              >
-                <img src="img/cake_4.png" draggable="false" alt="" />
-                <h5 class="mt-3 ls_5">Карамельный</h5>
-                <h6 class="pt-4 fw-normal">4 800 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_car">
+								<img src="img/cake_4.png" draggable="false" alt="" />
+								<h5 class="mt-3 ls_5">Карамельный</h5>
+								<h6 class="pt-4 fw-normal">4 800 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_djo"
-            tabindex="-1"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_2_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">Джованни</h4>
-                      <h6 class="cakes__article">Артикул: 4595</h6>
-                      <p class="cakes__costs">2 420₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        "Very berry" <br />
-                        Воздушный ванильный и малиново-черничный муссы в
-                        сочетании со свежими ягодами (малина, клубника, черная
-                        смородина, черника) на основе из нежного белого бисквита
-                        «Джоконд». Торт покрыт гелем, украшен шоколадным
-                        декором, желе маракуйя и кешью.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 1,3 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Порций: 10 Пищевая и энергетическая ценность на 100 г.
-                        продукта: белки – 5,16 г.; жиры – 11,99 г.; углеводы –
-                        24,35 г.; 226,0 ккал/ 945,76 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        Сливки мдж 33%, гель нейтральный (вода, сахар, глюкозный
-                        сироп, пектин, лимонная кислота, натуральная ваниль),
-                        сахарный песок, продукты яичные пастеризованные (белок),
-                        продукты яичные пастеризованные (желток), мука пшеничная
-                        хлебопекарная в/с, молоко питьевое ультрапастеризованное
-                        м.д.ж 3,2%( молоко цельное, молоко обезжиренное),
-                        клубника свежемороженая, малина свежемороженая, черная
-                        смородина свежемороженая, черника свежемороженая, пюре
-                        малина (малина, сахар), пюре черника (черника,
-                        сахар),орех кешью жаренный дробленый, белый шоколад
-                        (сахар, какао-масло, сухое молоко, подсолнечный лецитин,
-                        натуральная ваниль), глазурь шоколадная белая(сахар,
-                        масло какао, сухое цельное молоко, сухое обезжиренное
-                        молоко, молочный жир, эмульгатор, лецитин соевый,
-                        натуральный ароматизатор ваниль), крахмал кукурузный,
-                        желатин пищевой, пюре маракуйя с семечкой (маракуйя с
-                        семечкой, сахар), глазурь шоколадная темная (темный
-                        шоколад, глюкоза, сливки 33%), агар, ароматизатор
-                        натуральный ваниль, какао-масло, краситель натуральный
-                        пищевой: хлорофилл, консервант сорбиновая кислота
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (арахис, соя, орехи, кунжут и
-                        продукты их переработки). При производстве используется
-                        пюре ягоды малины, которое может окрашивать бисквит в
-                        сине-фиолетовый цвет.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_djo" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_2_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">Джованни</h4>
+											<h6 class="cakes__article">Артикул: 4595</h6>
+											<p class="cakes__costs">2 420₽</p>
+											<button
+												class="cakes__btn mb-4"
+												id="addToCart"
+												class="btn btn-success">
+												Заказать
+											</button>
+											<p class="cakes__title__text">
+												"Very berry" <br />
+												Воздушный ванильный и малиново-черничный муссы в
+												сочетании со свежими ягодами (малина, клубника,
+												черная смородина, черника) на основе из нежного
+												белого бисквита «Джоконд». Торт покрыт гелем,
+												украшен шоколадным декором, желе маракуйя и кешью.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,3 кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 10 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 5,16 г.; жиры – 11,99 г.;
+												углеводы – 24,35 г.; 226,0 ккал/ 945,76 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Сливки мдж 33%, гель нейтральный (вода, сахар,
+												глюкозный сироп, пектин, лимонная кислота,
+												натуральная ваниль), сахарный песок, продукты яичные
+												пастеризованные (белок), продукты яичные
+												пастеризованные (желток), мука пшеничная
+												хлебопекарная в/с, молоко питьевое
+												ультрапастеризованное м.д.ж 3,2%( молоко цельное,
+												молоко обезжиренное), клубника свежемороженая,
+												малина свежемороженая, черная смородина
+												свежемороженая, черника свежемороженая, пюре малина
+												(малина, сахар), пюре черника (черника, сахар),орех
+												кешью жаренный дробленый, белый шоколад (сахар,
+												какао-масло, сухое молоко, подсолнечный лецитин,
+												натуральная ваниль), глазурь шоколадная белая(сахар,
+												масло какао, сухое цельное молоко, сухое
+												обезжиренное молоко, молочный жир, эмульгатор,
+												лецитин соевый, натуральный ароматизатор ваниль),
+												крахмал кукурузный, желатин пищевой, пюре маракуйя с
+												семечкой (маракуйя с семечкой, сахар), глазурь
+												шоколадная темная (темный шоколад, глюкоза, сливки
+												33%), агар, ароматизатор натуральный ваниль,
+												какао-масло, краситель натуральный пищевой:
+												хлорофилл, консервант сорбиновая кислота
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (арахис, соя,
+												орехи, кунжут и продукты их переработки). При
+												производстве используется пюре ягоды малины, которое
+												может окрашивать бисквит в сине-фиолетовый цвет.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_djo"
-              >
-                <img src="img/cake_5.png" draggable="false" alt="" />
-                <h5 class="mt-3 ls_5">Джованни</h5>
-                <h6 class="mt-4 fw-normal">4 800 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_djo">
+								<img src="img/cake_5.png" draggable="false" alt="" />
+								<h5 class="mt-3 ls_5">Джованни</h5>
+								<h6 class="mt-4 fw-normal">4 800 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_two"
-            tabindex="-1"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_3_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">Эквадор (три шоколада)</h4>
-                      <h6 class="cakes__article">Артикул: 3088</h6>
-                      <p class="cakes__costs">2 725₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        Шоколадно-сырный мусс из трёх видов шоколада «Barry
-                        Callebaut» (белого, молочного и черного) и творожного
-                        сыра с прослойкой фойетина на основе из тонкого слоя
-                        шоколадного бисквита. Торт украшен ганашем и шоколадным
-                        декором.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 1,1кг</h4>
-                      <p class="cakes__text__bzh">
-                        Порций: 10 Пищевая и энергетическая ценность на 100 г.
-                        продукта: белки – 3,4 г.; жиры – 21,3 г.; углеводы –
-                        28,8 г.; 320,5 ккал/ 1342 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        Крем сливочный «Arla», сливки мдж 33%, сахар, молоко,
-                        шоколад темный, шоколад молочный, белок яичный
-                        пастеризованный, желток яичный пастеризованный, мука
-                        пшеничная хлебопекарная в/с, шоколадная глазурь белая,
-                        молоко цельное сгущенное с сахаром, белый шоколад,
-                        шоколадная глазурь темная, пралине, какао-масло,
-                        желатин, какао-порошок алкализованный, вафельная крошка,
-                        консервант сорбиновая кислота.
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (яйца, молоко, орехи, ягоды, фрукты,
-                        зерновые культуры, содержащие клейковину и продукты из
-                        них).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_two" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_3_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">
+												Эквадор (три шоколада)
+											</h4>
+											<h6 class="cakes__article">Артикул: 3088</h6>
+											<p class="cakes__costs">2 725₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Шоколадно-сырный мусс из трёх видов шоколада «Barry
+												Callebaut» (белого, молочного и черного) и
+												творожного сыра с прослойкой фойетина на основе из
+												тонкого слоя шоколадного бисквита. Торт украшен
+												ганашем и шоколадным декором.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,1кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 10 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 3,4 г.; жиры – 21,3 г.;
+												углеводы – 28,8 г.; 320,5 ккал/ 1342 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Крем сливочный «Arla», сливки мдж 33%, сахар,
+												молоко, шоколад темный, шоколад молочный, белок
+												яичный пастеризованный, желток яичный
+												пастеризованный, мука пшеничная хлебопекарная в/с,
+												шоколадная глазурь белая, молоко цельное сгущенное с
+												сахаром, белый шоколад, шоколадная глазурь темная,
+												пралине, какао-масло, желатин, какао-порошок
+												алкализованный, вафельная крошка, консервант
+												сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_two"
-              >
-                <img src="img/cake_6.png" draggable="false" alt="" />
-                <h5 class="mt-3 ls_5">Эквадор (три шоколада)</h5>
-                <h6 class="pt-4 fw-normal">4 800 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_two">
+								<img src="img/cake_6.png" draggable="false" alt="" />
+								<h5 class="mt-3 ls_5">Эквадор (три шоколада)</h5>
+								<h6 class="pt-4 fw-normal">4 800 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_mark"
-            tabindex="-1"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_4_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">Маракайбо</h4>
-                      <h6 class="cakes__article">Артикул: 2989</h6>
-                      <p class="cakes__costs">3 000₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        Три вида лёгкого фруктового мусса, малиновый, клубничный
-                        и маракуйя, расположенные слоями, на основе из тонкого
-                        белого бисквита. Торт покрыт малиновым гляссажем,
-                        украшен шоколадом, физалисом и голубикой.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 1,2 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Порций: 10 Пищевая и энергетическая ценность на 100 г.
-                        продукта: белки – 4,1 г.; жиры – 31,3 г.; углеводы –
-                        25,0 г.; 398 ккал/ 1666 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        Сливки мдж 33%, сахар, пюре малины (малина, тростниковый
-                        сахар), пюре клубники (клубника, сахар), пюре маракуйя
-                        (маракуйя, сахар), мука пшеничная хлебопекарная в/с,
-                        продукты яичные пастеризованные, желатин пищевой, гель
-                        нейтральный (вода, сахар, глюкозный сироп, пектин,
-                        лимонная кислота, натуральная ваниль), белый шоколад
-                        (сахар, какао-масло, сухое молоко, подсолнечный лецитин,
-                        натуральная ваниль), глазурь шоколадная темная (темный
-                        шоколад, глюкоза, сливки 33%), какао-масло, физалис
-                        свежий, голубика свежая, сорбиновая кислота.
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (яйца, молоко, орехи, ягоды, фрукты,
-                        зерновые культуры, содержащие клейковину и продукты из
-                        них).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_mark" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_4_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">Маракайбо</h4>
+											<h6 class="cakes__article">Артикул: 2989</h6>
+											<p class="cakes__costs">3 000₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Три вида лёгкого фруктового мусса, малиновый,
+												клубничный и маракуйя, расположенные слоями, на
+												основе из тонкого белого бисквита. Торт покрыт
+												малиновым гляссажем, украшен шоколадом, физалисом и
+												голубикой.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,2 кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 10 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 4,1 г.; жиры – 31,3 г.;
+												углеводы – 25,0 г.; 398 ккал/ 1666 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Сливки мдж 33%, сахар, пюре малины (малина,
+												тростниковый сахар), пюре клубники (клубника,
+												сахар), пюре маракуйя (маракуйя, сахар), мука
+												пшеничная хлебопекарная в/с, продукты яичные
+												пастеризованные, желатин пищевой, гель нейтральный
+												(вода, сахар, глюкозный сироп, пектин, лимонная
+												кислота, натуральная ваниль), белый шоколад (сахар,
+												какао-масло, сухое молоко, подсолнечный лецитин,
+												натуральная ваниль), глазурь шоколадная темная
+												(темный шоколад, глюкоза, сливки 33%), какао-масло,
+												физалис свежий, голубика свежая, сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div class="col-3 bg-color__cake d-none__cake"></div>
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div>
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_mark"
-              >
-                <img draggable="false" src="img/cake_7.png" alt="" />
-                <h5 class="mt-3 ls_5">Маракайбо</h5>
-                <h6 class="mt-4 fw-normal">4 800 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-3 bg-color__cake d-none__cake"></div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div>
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_mark">
+								<img draggable="false" src="img/cake_7.png" alt="" />
+								<h5 class="mt-3 ls_5">Маракайбо</h5>
+								<h6 class="mt-4 fw-normal">4 800 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_cherry"
-            tabindex="-1"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_5_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">Шоколадный с вишней</h4>
-                      <h6 class="cakes__article">Артикул: 6423</h6>
-                      <p class="cakes__costs">2 475₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        Слои бисквита на кефире с какао, в сочетании с ванильным
-                        муссом и вишнёвой начинкой. Торт украшен ганашем, вишней
-                        коктейльной и шоколадным декором.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 1,1 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Пищевая и энергетическая ценность на 100 г. продукта:
-                        белки – 3,92 г.; жиры – 11,79 г.; углеводы – 27,86 г.;
-                        233,27 ккал/ 963,4 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        Вишня в сиропе (вишня, вода, сахар), сахар, крем
-                        сливочный «сливки для взбивания» (сливки
-                        нормализованные), мука пшеничная в/с, молоко питьевое,
-                        масло сливочное, продукты яичные пастеризованные,
-                        красная коктейльная черешня с веточкой (черешня, вода,
-                        сахар, сироп глюкозы, лимонная кислота), пюре фруктовое
-                        вишня (пюре вишневое, сахар), шоколад темный
-                        (какао-масло, сахар, какао-порошок, соевый лецитин,
-                        ароматизатор - ваниль), глазурь кондитерская «Мируар
-                        глассаж Нцар» (сироп глюкозный, сахар, вода,
-                        какао-порошок, загуститель-желатин пищевой, винная
-                        кислота), какао-порошок, желирующий агент пектин,
-                        разрыхлитель-сода пищевая (гидрокарбонат натрия),
-                        загуститель - желатин пищевой, регулятор кислотности -
-                        уксус столовый, ароматизатор натуральный «ваниль»,
-                        консервант- сорбиновая кислота.
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать следы ингредиентов,
-                        вызывающие аллергию (орехи, арахис и продукты их
-                        переработки).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_cherry" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_5_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">Шоколадный с вишней</h4>
+											<h6 class="cakes__article">Артикул: 6423</h6>
+											<p class="cakes__costs">2 475₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Слои бисквита на кефире с какао, в сочетании с
+												ванильным муссом и вишнёвой начинкой. Торт украшен
+												ганашем, вишней коктейльной и шоколадным декором.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,1 кг</h4>
+											<p class="cakes__text__bzh">
+												Пищевая и энергетическая ценность на 100 г.
+												продукта: белки – 3,92 г.; жиры – 11,79 г.; углеводы
+												– 27,86 г.; 233,27 ккал/ 963,4 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Вишня в сиропе (вишня, вода, сахар), сахар, крем
+												сливочный «сливки для взбивания» (сливки
+												нормализованные), мука пшеничная в/с, молоко
+												питьевое, масло сливочное, продукты яичные
+												пастеризованные, красная коктейльная черешня с
+												веточкой (черешня, вода, сахар, сироп глюкозы,
+												лимонная кислота), пюре фруктовое вишня (пюре
+												вишневое, сахар), шоколад темный (какао-масло,
+												сахар, какао-порошок, соевый лецитин, ароматизатор -
+												ваниль), глазурь кондитерская «Мируар глассаж Нцар»
+												(сироп глюкозный, сахар, вода, какао-порошок,
+												загуститель-желатин пищевой, винная кислота),
+												какао-порошок, желирующий агент пектин,
+												разрыхлитель-сода пищевая (гидрокарбонат натрия),
+												загуститель - желатин пищевой, регулятор кислотности
+												- уксус столовый, ароматизатор натуральный «ваниль»,
+												консервант- сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												следы ингредиентов, вызывающие аллергию (орехи,
+												арахис и продукты их переработки).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_cherry"
-              >
-                <img draggable="false" src="img/cake_8.png" alt="" />
-                <h5 class="mt-3 ls_5">Шоколадный с вишней</h5>
-                <h6 class="pt-4 fw-normal">4 800 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_cherry">
+								<img draggable="false" src="img/cake_8.png" alt="" />
+								<h5 class="mt-3 ls_5">Шоколадный с вишней</h5>
+								<h6 class="pt-4 fw-normal">4 800 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_ny"
-              >
-                <img draggable="false" src="img/cake_9.png" alt="" />
-                <h5 class="mt-3 ls_5">Чизкейк "Нью-Йорк" <br />с апельсином</h5>
-                <h6 class="pt-4 fw-normal">4 800 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_ny">
+								<img draggable="false" src="img/cake_9.png" alt="" />
+								<h5 class="mt-3 ls_5">Чизкейк "Нью-Йорк" <br />с апельсином</h5>
+								<h6 class="pt-4 fw-normal">4 800 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div class="modal overflow-y-scroll fade" id="modal_ny" tabindex="-1">
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_6_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">
-                        Чиз-кейк "Нью-Йорк" с апельсином
-                      </h4>
-                      <h6 class="cakes__article">Артикул: 10188</h6>
-                      <p class="cakes__costs">1 490₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        Нежная сырная выпечная масса из творожного сыра на
-                        тонкой песочной основе.Торт декорирован свежими
-                        апельсинами и грейпфрутом, украшен фирменным логотипом.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 0,750 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Пищевая и энергетическая ценность на 100 г. продукта:
-                        белки – 5 г.; жиры – 17 г.; углеводы – 27 г.; 280 ккал/
-                        1170 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        сыр творожный м.д.ж. 65% (нормализованное
-                        пастеризованное молоко, молокосвертывающий фермент
-                        микробного происхождения, закваска бактериальная
-                        стабилизатор-камедь рожкового дерева, соль), сахар, мука
-                        пшеничная в/с, апельсин свежий, масло сладко-сливочное
-                        м.д.ж. 82,5% (пастеризованные сливки), продукты яичные
-                        пастеризованные (белок, желток), грейпфрут свежий,
-                        глазурь «Армони нейтральная» (вода питьевая, сахар,
-                        сироп глюкозный, пектин, регулятор кислотности лимонная
-                        кислота), пюре апельсина (апельсин), сметана м.д.ж. 20%
-                        (сливки нормализованные, заквасочные микроорганизмы),
-                        сливки питьевые ультрапастеризованные м.д.ж 33%, шоколад
-                        темный (какао масса, сахар, какао-масло, эмульгатор (
-                        соевый лецитин), ароматизатор ванилин), загуститель -
-                        желатин пищевой, краситель куркума, ароматизатор –
-                        ванилин, регулятор кислотности – лимонная кислота,
-                        шоколад белый (сахар, масло какао, молоко сухое цельное,
-                        эмульгатор -лецитин соевый, ароматизатор ванилин), соль
-                        пищевая, консервант - сорбиновая кислота.
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (яйца, молоко, орехи, ягоды, фрукты,
-                        зерновые культуры, содержащие клейковину и продукты из
-                        них).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_ny" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_6_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">
+												Чиз-кейк "Нью-Йорк" с апельсином
+											</h4>
+											<h6 class="cakes__article">Артикул: 10188</h6>
+											<p class="cakes__costs">1 490₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Нежная сырная выпечная масса из творожного сыра на
+												тонкой песочной основе.Торт декорирован свежими
+												апельсинами и грейпфрутом, украшен фирменным
+												логотипом.
+											</p>
+											<h4 class="cakes__ves">Вес: 0,750 кг</h4>
+											<p class="cakes__text__bzh">
+												Пищевая и энергетическая ценность на 100 г.
+												продукта: белки – 5 г.; жиры – 17 г.; углеводы – 27
+												г.; 280 ккал/ 1170 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												сыр творожный м.д.ж. 65% (нормализованное
+												пастеризованное молоко, молокосвертывающий фермент
+												микробного происхождения, закваска бактериальная
+												стабилизатор-камедь рожкового дерева, соль), сахар,
+												мука пшеничная в/с, апельсин свежий, масло
+												сладко-сливочное м.д.ж. 82,5% (пастеризованные
+												сливки), продукты яичные пастеризованные (белок,
+												желток), грейпфрут свежий, глазурь «Армони
+												нейтральная» (вода питьевая, сахар, сироп глюкозный,
+												пектин, регулятор кислотности лимонная кислота),
+												пюре апельсина (апельсин), сметана м.д.ж. 20%
+												(сливки нормализованные, заквасочные
+												микроорганизмы), сливки питьевые
+												ультрапастеризованные м.д.ж 33%, шоколад темный
+												(какао масса, сахар, какао-масло, эмульгатор (
+												соевый лецитин), ароматизатор ванилин), загуститель
+												- желатин пищевой, краситель куркума, ароматизатор –
+												ванилин, регулятор кислотности – лимонная кислота,
+												шоколад белый (сахар, масло какао, молоко сухое
+												цельное, эмульгатор -лецитин соевый, ароматизатор
+												ванилин), соль пищевая, консервант - сорбиновая
+												кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div class="col-3 bg-color__cake d-none__cake"></div>
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_rish"
-              >
-                <img draggable="false" src="img/cake_1.png" alt="" />
-                <h5 class="mt-3 ls_5">Ришелье</h5>
-                <h6 class="pt-4 fw-normal">2 450 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-3 bg-color__cake d-none__cake"></div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_rish">
+								<img draggable="false" src="img/cake_1.png" alt="" />
+								<h5 class="mt-3 ls_5">Ришелье</h5>
+								<h6 class="pt-4 fw-normal">2 450 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_rish"
-            tabindex="-1"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_7_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">Ришелье</h4>
-                      <h6 class="cakes__article">Артикул: 3037</h6>
-                      <p class="cakes__costs">2 450₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        Сочетание малинового мусса и мусса из молочного шоколада
-                        с прослойкой из малинового желе на основе из шоколадного
-                        бисквита, пропитанного сиропом и ромом «Bacardi». Покрыт
-                        гляссажем из молочного шоколада. Декор: молочный шоколад
-                        и голубика.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 1,1 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Порций: 10 Пищевая и энергетическая ценность на 100 г.
-                        продукта: белки – 4,3 г.; жиры – 23,4 г.; углеводы –
-                        27,1 г.; 336 ккал/ 1407 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        Сливки мдж 33%, шоколад молочный (сахар, какао-масло,
-                        сухое молоко цельное, какао тертое, соевый лецитин,
-                        натуральная ваниль), сахар , продукты яичные
-                        пастеризованные, пюре малины (малина, тростниковый
-                        сахар), патока крахмальная карамельная, мука пшеничная
-                        хлебопекарная в/с, молоко сгущенное цельное с сахаром
-                        (молоко, сахар), какао-порошок, масло сливочное, желатин
-                        пищевой, ром выдержанный «Бакарди Карта Нэгра», голубика
-                        свежая, глазурь шоколадная темная (темный шоколад,
-                        глюкоза, сливки 33%), какао-масло, краситель: кармин,
-                        сорбиновая кислота.
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (яйца, молоко, орехи, ягоды, фрукты,
-                        зерновые культуры, содержащие клейковину и продукты из
-                        них).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_rish" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_7_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">Ришелье</h4>
+											<h6 class="cakes__article">Артикул: 3037</h6>
+											<p class="cakes__costs">2 450₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Сочетание малинового мусса и мусса из молочного
+												шоколада с прослойкой из малинового желе на основе
+												из шоколадного бисквита, пропитанного сиропом и
+												ромом «Bacardi». Покрыт гляссажем из молочного
+												шоколада. Декор: молочный шоколад и голубика.
+											</p>
+											<h4 class="cakes__ves">Вес: 1,1 кг</h4>
+											<p class="cakes__text__bzh">
+												Порций: 10 Пищевая и энергетическая ценность на 100
+												г. продукта: белки – 4,3 г.; жиры – 23,4 г.;
+												углеводы – 27,1 г.; 336 ккал/ 1407 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Сливки мдж 33%, шоколад молочный (сахар,
+												какао-масло, сухое молоко цельное, какао тертое,
+												соевый лецитин, натуральная ваниль), сахар ,
+												продукты яичные пастеризованные, пюре малины
+												(малина, тростниковый сахар), патока крахмальная
+												карамельная, мука пшеничная хлебопекарная в/с,
+												молоко сгущенное цельное с сахаром (молоко, сахар),
+												какао-порошок, масло сливочное, желатин пищевой, ром
+												выдержанный «Бакарди Карта Нэгра», голубика свежая,
+												глазурь шоколадная темная (темный шоколад, глюкоза,
+												сливки 33%), какао-масло, краситель: кармин,
+												сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_tru"
-              >
-                <img draggable="false" src="img/cake_2.png" alt="" />
-                <h5 class="mt-3 ls_5">Трюфель</h5>
-                <h6 class="pt-4 fw-normal">2 605 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_tru">
+								<img draggable="false" src="img/cake_2.png" alt="" />
+								<h5 class="mt-3 ls_5">Трюфель</h5>
+								<h6 class="pt-4 fw-normal">2 605 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_tru"
-            tabindex="-1"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_8_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">Трюфель</h4>
-                      <h6 class="cakes__article">Артикул: 9756</h6>
-                      <p class="cakes__costs">2 605 ₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        Сочетание шоколадно-трюфельного мусса, изготовленного с
-                        применением горького шоколада «Barry Callebaut» и
-                        основой из шоколадного бисквита, пропитанного сахарным
-                        сиропом и ромом «Bacardi». Торт прослоен ганашем из
-                        горького шоколада. Декорирован велюром и шоколадом.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 1 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Пищевая и энергетическая ценность на 100 г. продукта:
-                        белки – 5,0 г.; жиры – 30 г.; углеводы – 22 г.; 390
-                        ккал/ 1600 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        Сливки питьевые м.д.ж 33%, шоколад горький (какао
-                        тертое, сахар, масло какао, какао-порошок, эмульгатор
-                        (лецитин соевый), ароматизатор ванилин), шоколад темный
-                        (какао масса, сахар, какао-масло, эмульгатор
-                        (подсолнечный лецитин) ароматизатор ваниль), сахарный
-                        песок, продукты яичные пастеризованные (желток), масло
-                        сливочное мдж 82,5 %, молоко питьевое мдж 3,2%, сливки
-                        питьевые м.д.ж 33%, продукты яичные пастеризованные
-                        (белок), какао-масло, какао-порошок, мука пшеничная
-                        хлебопекарная высший сорт, загуститель крахмал
-                        кукурузный, ром «Бакарди карта нэгра» (вода питьевая
-                        исправленная, ромовый выдержанный дистиллят, краситель -
-                        сахарный колер IV), щоколадные карандаши (какао тертое,
-                        сахар, масло какао,эмульгатор соевый лецитин) глазурь
-                        «Армони нейтральная» (сироп глюкозный, вода, сахар,
-                        пектин, регулятор кислотности лимонная кислота), глазурь
-                        кондитерская (сироп глюкозный, сахар, какао-порошок,
-                        желатин, винная кислота), консервант сорбиновая кислота.
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (арахис, орехи, и продукты их
-                        переработки).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_tru" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_8_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">Трюфель</h4>
+											<h6 class="cakes__article">Артикул: 9756</h6>
+											<p class="cakes__costs">2 605 ₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Сочетание шоколадно-трюфельного мусса,
+												изготовленного с применением горького шоколада
+												«Barry Callebaut» и основой из шоколадного бисквита,
+												пропитанного сахарным сиропом и ромом «Bacardi».
+												Торт прослоен ганашем из горького шоколада.
+												Декорирован велюром и шоколадом.
+											</p>
+											<h4 class="cakes__ves">Вес: 1 кг</h4>
+											<p class="cakes__text__bzh">
+												Пищевая и энергетическая ценность на 100 г.
+												продукта: белки – 5,0 г.; жиры – 30 г.; углеводы –
+												22 г.; 390 ккал/ 1600 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Сливки питьевые м.д.ж 33%, шоколад горький (какао
+												тертое, сахар, масло какао, какао-порошок,
+												эмульгатор (лецитин соевый), ароматизатор ванилин),
+												шоколад темный (какао масса, сахар, какао-масло,
+												эмульгатор (подсолнечный лецитин) ароматизатор
+												ваниль), сахарный песок, продукты яичные
+												пастеризованные (желток), масло сливочное мдж 82,5
+												%, молоко питьевое мдж 3,2%, сливки питьевые м.д.ж
+												33%, продукты яичные пастеризованные (белок),
+												какао-масло, какао-порошок, мука пшеничная
+												хлебопекарная высший сорт, загуститель крахмал
+												кукурузный, ром «Бакарди карта нэгра» (вода питьевая
+												исправленная, ромовый выдержанный дистиллят,
+												краситель - сахарный колер IV), щоколадные карандаши
+												(какао тертое, сахар, масло какао,эмульгатор соевый
+												лецитин) глазурь «Армони нейтральная» (сироп
+												глюкозный, вода, сахар, пектин, регулятор
+												кислотности лимонная кислота), глазурь кондитерская
+												(сироп глюкозный, сахар, какао-порошок, желатин,
+												винная кислота), консервант сорбиновая кислота.
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (арахис, орехи, и
+												продукты их переработки).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list"
-          >
-            <div class="width">
-              <a
-                href="#!"
-                class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
-                type="button"
-                id="btn"
-                class="btn btn-primary col-1"
-                data-bs-toggle="modal"
-                data-bs-target="#modal_ven"
-              >
-                <img draggable="false" src="img/cake_3.png" alt="" />
-                <h5 class="mt-3 ls_5">Венера</h5>
-                <h6 class="pt-4 fw-normal">2 125 ₽</h6>
-              </a>
-            </div>
-          </div>
+					<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cake__list">
+						<div class="width">
+							<a
+								href="#!"
+								class="text-dark link-offset-2 link-underline link-underline-opacity-0 mb-4 d-grid justify-content-end align-items-end text-left"
+								type="button"
+								id="btn"
+								class="btn btn-primary col-1"
+								data-bs-toggle="modal"
+								data-bs-target="#modal_ven">
+								<img draggable="false" src="img/cake_3.png" alt="" />
+								<h5 class="mt-3 ls_5">Венера</h5>
+								<h6 class="pt-4 fw-normal">2 125 ₽</h6>
+							</a>
+						</div>
+					</div>
 
-          <div
-            class="modal overflow-y-scroll fade"
-            id="modal_ven"
-            tabindex="-1"
-          >
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <img
-                        src="./img/cake_9_full.jpg"
-                        draggable="false"
-                        width="100%"
-                        alt=""
-                        class="mt-5"
-                      />
-                    </div>
-                    <div
-                      class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12"
-                    >
-                      <h4 class="cakes__title mt-5">Венера</h4>
-                      <h6 class="cakes__article">Артикул: 5105</h6>
-                      <p class="cakes__costs">2 125 ₽</p>
-                      <button class="cakes__btn mb-4">Заказать</button>
-                      <p class="cakes__title__text">
-                        Два вида мусса, чёрная смородина и ванильный, в
-                        сочетании с прослойкой и основой из шоколадного
-                        бисквита, пропитанного сиропом с чёрной смородиной и
-                        ромом «Bacardi» . Композиция торта состоит из полумесяца
-                        и круга. Торт оформлен цветной зеркальной глазурью, на
-                        основе белого шоколада и сгущенного молока. Декорирован
-                        белой кондитерской крошкой и разноцветными сахарными
-                        жемчужинами.
-                      </p>
-                      <h4 class="cakes__ves">Вес: 0,700 кг</h4>
-                      <p class="cakes__text__bzh">
-                        Пищевая и энергетическая ценность на 100 г. продукта:
-                        белки – 4,8 г.; жиры – 15,5 г.; углеводы – 44 г.; 330
-                        ккал/ 1380 кДж.
-                      </p>
-                      <h5 class="cakes__sotav">Состав:</h5>
-                      <p class="cakes__sostav__text">
-                        Сахар, крем сливочный «сливки для взбивания» (сливки
-                        нормализованные), продукты яичные пастеризованные,
-                        ягодное пюре пастеризованное «Черная смородина» (пюре
-                        черной смородины, сахар), шоколад белый (сахар,
-                        какао-масло, сухое молоко, подсолнечный лецитин,
-                        натуральная ваниль), патока крахмальная карамельная,
-                        мука пшеничная в/с, кондитерская глазурь в виде крошки
-                        (сахар, сухое обезжиренное молоко, лактоза, соевый
-                        лецитин, глюкоза), молоко сгущенное (молоко
-                        нормализованное), молоко питьевое, желатин пищевой,
-                        какао-порошок, ром «Бакарди», сахар, какао-масло,
-                        шоколад белый (сахар, какао-масло, сухое молоко,
-                        подсолнечный лецитин, натуральная ваниль), ароматизатор
-                        натуральный «ваниль», краситель гелевый пищевой, шарики
-                        сахаристые золото (сахар, крахмал кукурузный и рисовый,
-                        глюкозный сироп, натуральная ваниль), шарики сахарные:
-                        розовый жемчуг, белый жемчуг (сахар, пшеничный крахмал,
-                        натуральная ваниль), шарики сахарные белые (сахар,
-                        пшеничная мука).
-                      </p>
-                      <p class="cakes__sostav__text">
-                        Возможно попадание ореховой скорлупы и плодово-ягодных
-                        косточек. Продукт может содержать ингредиенты,
-                        вызывающие аллергию (яйца, молоко, орехи, ягоды, фрукты,
-                        зерновые культуры, содержащие клейковину и продукты из
-                        них).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Закрыть
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="modal overflow-y-scroll fade" id="modal_ven" tabindex="-1">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="container-fluid">
+									<div class="row">
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<img
+												src="./img/cake_9_full.jpg"
+												draggable="false"
+												width="100%"
+												alt=""
+												class="mt-5" />
+										</div>
+										<div
+											class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+											<h4 class="cakes__title mt-5">Венера</h4>
+											<h6 class="cakes__article">Артикул: 5105</h6>
+											<p class="cakes__costs">2 125 ₽</p>
+											<button class="cakes__btn mb-4">Заказать</button>
+											<p class="cakes__title__text">
+												Два вида мусса, чёрная смородина и ванильный, в
+												сочетании с прослойкой и основой из шоколадного
+												бисквита, пропитанного сиропом с чёрной смородиной и
+												ромом «Bacardi» . Композиция торта состоит из
+												полумесяца и круга. Торт оформлен цветной зеркальной
+												глазурью, на основе белого шоколада и сгущенного
+												молока. Декорирован белой кондитерской крошкой и
+												разноцветными сахарными жемчужинами.
+											</p>
+											<h4 class="cakes__ves">Вес: 0,700 кг</h4>
+											<p class="cakes__text__bzh">
+												Пищевая и энергетическая ценность на 100 г.
+												продукта: белки – 4,8 г.; жиры – 15,5 г.; углеводы –
+												44 г.; 330 ккал/ 1380 кДж.
+											</p>
+											<h5 class="cakes__sotav">Состав:</h5>
+											<p class="cakes__sostav__text">
+												Сахар, крем сливочный «сливки для взбивания» (сливки
+												нормализованные), продукты яичные пастеризованные,
+												ягодное пюре пастеризованное «Черная смородина»
+												(пюре черной смородины, сахар), шоколад белый
+												(сахар, какао-масло, сухое молоко, подсолнечный
+												лецитин, натуральная ваниль), патока крахмальная
+												карамельная, мука пшеничная в/с, кондитерская
+												глазурь в виде крошки (сахар, сухое обезжиренное
+												молоко, лактоза, соевый лецитин, глюкоза), молоко
+												сгущенное (молоко нормализованное), молоко питьевое,
+												желатин пищевой, какао-порошок, ром «Бакарди»,
+												сахар, какао-масло, шоколад белый (сахар,
+												какао-масло, сухое молоко, подсолнечный лецитин,
+												натуральная ваниль), ароматизатор натуральный
+												«ваниль», краситель гелевый пищевой, шарики
+												сахаристые золото (сахар, крахмал кукурузный и
+												рисовый, глюкозный сироп, натуральная ваниль),
+												шарики сахарные: розовый жемчуг, белый жемчуг
+												(сахар, пшеничный крахмал, натуральная ваниль),
+												шарики сахарные белые (сахар, пшеничная мука).
+											</p>
+											<p class="cakes__sostav__text">
+												Возможно попадание ореховой скорлупы и
+												плодово-ягодных косточек. Продукт может содержать
+												ингредиенты, вызывающие аллергию (яйца, молоко,
+												орехи, ягоды, фрукты, зерновые культуры, содержащие
+												клейковину и продукты из них).
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Закрыть
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-12 col-md-0 col-sm-0 col-0 bg-color__cake d-none__cake"
-          ></div>
-          <div
-            class="col-xxl-9 col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 mb-5 btn_stil_div"
-          >
-            <button class="btn_stil">Загрузить ещё</button>
-          </div>
-        </div>
-      </div>
-    </main>
-    <section class="bg__ready pb-122">
-      <div class="container">
-        <div class="row">
-          <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-            <h2 class="ready__title">Готовые торты D & D Royal</h2>
-            <h5 class="ready__text__left fs-5 ls_5">
-              В кондитерской D & D Роял можно купить готовые торты с доставкой
-              по Мурманску и Мурманской области. Мы занимаемся изготовлением
-              тортов с 2006 года и наш опыт позволяет предлагать лучшие цены от
-              производителя. Для особых случаев и праздников у нас также можно
-              заказать торт с индивидуальным дизайном и украшениями, выбрав
-              любую начинку из готовых.
-            </h5>
-          </div>
-          <div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-            <h5 class="ready__text__right fs-5 ls_5">
-              В каталоге вы найдете более 40 видов тортов с начинками и коржами
-              на любой вкус. Помимо классических тортов таких как: тирамису,
-              морковный торт, медовик, красный бархат, киевский торт, торт
-              птичье молоко, графские развалины, трюфель и чизкейки, вы найдете
-              торты, изготовленные по авторскому рецепту от нашего шефа:
-              маракайбо, бейлис, джованни и другие. Все торты свежие и в наличии
-              и доступы для заказа онлайн на нашем сайте.
-            </h5>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="bg_footer pt-4">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 footer_margin"
-          >
-            <a href="index.html">
-              <img class="mb-4" src="./img/LOGO.svg" alt="" />
-            </a>
-            <p class="m-0">© 2024 D&D ROYAL</p>
-            <a class="color__pol" href="#!">Политика конфиденциальности</a>
-          </div>
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 d-grid justify-content-center"
-          >
-            <h4 class="mb-6">ТОРТЫ</h4>
-            <a class="mb-7 text-black text-decoration-none" href=""
-              >Торты на заказ</a
-            >
-            <a class="mb-7 text-black text-decoration-none" href=""
-              >Торты на день рождения</a
-            >
-            <a class="mb-7 text-black text-decoration-none" href=""
-              >Классические торты</a
-            >
-            <a class="mb-7 text-black text-decoration-none" href=""
-              >Бисквитные торты</a
-            >
-            <a class="mb-7 text-black text-decoration-none" href=""
-              >Детские торты</a
-            >
-            <a class="mb-7 text-black text-decoration-none" href=""
-              >Украшения для тортов</a
-            >
-          </div>
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 d-grid justify-content-center"
-          >
-            <h4 class="mb-sm-6">ПИРОЖНЫЕ</h4>
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Набор пирожных</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Макарони пирожные</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Пирожные эклер</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Пирожнеы суфле</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Веганские десерты</a
-            >
-          </div>
-          <div
-            class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 d-grid justify-content-center"
-          >
-            <h4 class="mb-sm-6">ДЛЯ КЛИЕНТОВ</h4>
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Каталог тортов и пирожных</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Доставка и оплата</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >О кондитерской</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Карта сайта</a
-            >
-            <a class="mb-sm-7 text-black text-decoration-none" href=""
-              >Контакты</a
-            >
-          </div>
-          <div class="col-12 d-flex mt-5">
-            <p>Способ оплаты</p>
-            <a href=""><img src="./img/pay.png" alt="" /></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="./js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+					<div
+						class="col-xxl-3 col-xl-3 col-lg-12 col-md-0 col-sm-0 col-0 bg-color__cake d-none__cake"></div>
+					<div
+						class="col-xxl-9 col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 mb-5 btn_stil_div">
+						<button class="btn_stil">Загрузить ещё</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section class="bg__ready pb-122">
+			<div class="container">
+				<div class="row">
+					<div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+						<h2 class="ready__title">Готовые торты D & D Royal</h2>
+						<h5 class="ready__text__left fs-5 ls_5">
+							В кондитерской D & D Роял можно купить готовые торты с доставкой по
+							Мурманску и Мурманской области. Мы занимаемся изготовлением тортов с
+							2006 года и наш опыт позволяет предлагать лучшие цены от производителя.
+							Для особых случаев и праздников у нас также можно заказать торт с
+							индивидуальным дизайном и украшениями, выбрав любую начинку из готовых.
+						</h5>
+					</div>
+					<div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+						<h5 class="ready__text__right fs-5 ls_5">
+							В каталоге вы найдете более 40 видов тортов с начинками и коржами на
+							любой вкус. Помимо классических тортов таких как: тирамису, морковный
+							торт, медовик, красный бархат, киевский торт, торт птичье молоко,
+							графские развалины, трюфель и чизкейки, вы найдете торты, изготовленные
+							по авторскому рецепту от нашего шефа: маракайбо, бейлис, джованни и
+							другие. Все торты свежие и в наличии и доступы для заказа онлайн на
+							нашем сайте.
+						</h5>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="bg_footer pt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 footer_margin">
+						<a href="index.html">
+							<img class="mb-4" src="./img/LOGO.svg" alt="" />
+						</a>
+						<p class="m-0">© 2024 D&D ROYAL</p>
+						<a class="color__pol" href="#!">Политика конфиденциальности</a>
+					</div>
+					<div
+						class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 d-grid justify-content-center">
+						<h4 class="mb-6">ТОРТЫ</h4>
+						<a class="mb-7 text-black text-decoration-none" href="">Торты на заказ</a>
+						<a class="mb-7 text-black text-decoration-none" href=""
+							>Торты на день рождения</a
+						>
+						<a class="mb-7 text-black text-decoration-none" href=""
+							>Классические торты</a
+						>
+						<a class="mb-7 text-black text-decoration-none" href="">Бисквитные торты</a>
+						<a class="mb-7 text-black text-decoration-none" href="">Детские торты</a>
+						<a class="mb-7 text-black text-decoration-none" href=""
+							>Украшения для тортов</a
+						>
+					</div>
+					<div
+						class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 d-grid justify-content-center">
+						<h4 class="mb-sm-6">ПИРОЖНЫЕ</h4>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>Набор пирожных</a
+						>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>Макарони пирожные</a
+						>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>Пирожные эклер</a
+						>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>Пирожнеы суфле</a
+						>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>Веганские десерты</a
+						>
+					</div>
+					<div
+						class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 d-grid justify-content-center">
+						<h4 class="mb-sm-6">ДЛЯ КЛИЕНТОВ</h4>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>Каталог тортов и пирожных</a
+						>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>Доставка и оплата</a
+						>
+						<a class="mb-sm-7 text-black text-decoration-none" href=""
+							>О кондитерской</a
+						>
+						<a class="mb-sm-7 text-black text-decoration-none" href="">Карта сайта</a>
+						<a class="mb-sm-7 text-black text-decoration-none" href="">Контакты</a>
+					</div>
+					<div class="col-12 d-flex mt-5">
+						<p>Способ оплаты</p>
+						<a href=""><img src="./img/pay.png" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
 </html>
